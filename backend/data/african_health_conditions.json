@@ -1,0 +1,5345 @@
+{
+  "version": "1.0",
+  "region": "Pan-Africa",
+  "lastUpdated": "2026-02-23",
+  "conditions": [
+    {
+      "id": "malaria_pf",
+      "condition": "Malaria (Plasmodium falciparum)",
+      "category": "infectious_disease",
+      "subRegionRelevance": [
+        "West Africa",
+        "East Africa",
+        "Central Africa",
+        "Southern Africa"
+      ],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "sweating",
+        "headache",
+        "muscle aches",
+        "fatigue",
+        "nausea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "severe headache",
+        "confusion",
+        "seizures",
+        "severe anemia",
+        "jaundice",
+        "dark urine",
+        "difficulty breathing"
+      ],
+      "riskFactors": [
+        "mosquito exposure",
+        "lack of bed net",
+        "no antimalarial prophylaxis",
+        "pregnancy",
+        "young children",
+        "travel to endemic areas"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "rainy season peak",
+        "high in wet months",
+        "year-round in tropical regions"
+      ],
+      "notes": "Most common parasitic disease in Africa; preventive screening recommended for fever in endemic areas"
+    },
+    {
+      "id": "tuberculosis",
+      "condition": "Tuberculosis (TB)",
+      "category": "infectious_disease",
+      "subRegionRelevance": [
+        "West Africa",
+        "East Africa",
+        "Central Africa",
+        "Southern Africa"
+      ],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "persistent cough",
+        "blood in sputum",
+        "chest pain",
+        "fatigue",
+        "weight loss",
+        "fever",
+        "night sweats",
+        "loss of appetite"
+      ],
+      "redFlagSymptoms": [
+        "hemoptysis",
+        "shortness of breath at rest",
+        "severe weight loss",
+        "signs of emaciation"
+      ],
+      "riskFactors": [
+        "HIV infection",
+        "malnutrition",
+        "overcrowded living",
+        "smoking",
+        "alcohol use",
+        "indoor air pollution",
+        "recent TB contact"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 0.9,
+        "15-50": 1.0,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "year-round high incidence",
+        "winter months slightly higher"
+      ],
+      "notes": "Leading cause of death from infectious disease in Africa; early detection critical"
+    },
+    {
+      "id": "hiv_related",
+      "condition": "HIV-Related Conditions",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["Southern Africa", "East Africa", "West Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "fatigue",
+        "weight loss",
+        "night sweats",
+        "persistent diarrhea",
+        "oral thrush",
+        "skin rashes",
+        "swollen lymph nodes"
+      ],
+      "redFlagSymptoms": [
+        "opportunistic infections",
+        "severe pneumonia",
+        "cryptococcal meningitis symptoms",
+        "extreme weight loss",
+        "severe thrush"
+      ],
+      "riskFactors": [
+        "unprotected sexual contact",
+        "vertical transmission",
+        "blood transfusion",
+        "healthcare worker exposure",
+        "needle sharing"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 0.8,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Preventive care and testing recommended; focus on symptom awareness and early intervention"
+    },
+    {
+      "id": "cholera",
+      "condition": "Cholera",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "East Africa", "Central Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "acute watery diarrhea",
+        "vomiting",
+        "dehydration",
+        "muscle cramps",
+        "rapid weak pulse",
+        "low blood pressure"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "shock",
+        "rapid pulse above 120",
+        "lethargy",
+        "sunken eyes",
+        "inability to drink"
+      ],
+      "riskFactors": [
+        "contaminated water",
+        "poor sanitation",
+        "overcrowding",
+        "malnutrition",
+        "displaced populations",
+        "post-disaster settings"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "rainy season peak",
+        "flooding increases risk"
+      ],
+      "notes": "Medical emergency; rapid rehydration is critical; preventive focus on water safety"
+    },
+    {
+      "id": "typhoid",
+      "condition": "Typhoid Fever",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "East Africa", "Central Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "high fever",
+        "headache",
+        "weakness",
+        "abdominal pain",
+        "rose spots rash",
+        "delirium",
+        "rose-colored spots on chest"
+      ],
+      "redFlagSymptoms": [
+        "very high fever",
+        "delirium or confusion",
+        "intestinal perforation signs",
+        "severe abdominal pain",
+        "shock symptoms"
+      ],
+      "riskFactors": [
+        "contaminated water or food",
+        "poor sanitation",
+        "crowded living",
+        "lack of vaccination",
+        "travel to endemic areas"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "year-round presence",
+        "peaks in wet season"
+      ],
+      "notes": "Preventive vaccination recommended; safe water is key prevention"
+    },
+    {
+      "id": "dengue",
+      "condition": "Dengue Fever",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "East Africa"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "sudden fever",
+        "severe headache",
+        "muscle aches",
+        "joint pain",
+        "rash",
+        "nausea",
+        "vomiting",
+        "bleeding"
+      ],
+      "redFlagSymptoms": [
+        "severe bleeding",
+        "plasma leakage signs",
+        "severe abdominal pain",
+        "persistent vomiting",
+        "lethargy",
+        "shock"
+      ],
+      "riskFactors": [
+        "mosquito exposure",
+        "urban living",
+        "previous dengue infection",
+        "travel to endemic areas"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "rainy season peak",
+        "warm months high risk"
+      ],
+      "notes": "Emerging risk in urban Africa; mosquito control is primary prevention"
+    },
+    {
+      "id": "yellow_fever",
+      "condition": "Yellow Fever",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "Central Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "headache",
+        "back pain",
+        "nausea",
+        "vomiting",
+        "jaundice",
+        "dark urine"
+      ],
+      "redFlagSymptoms": [
+        "severe jaundice",
+        "severe bleeding",
+        "organ failure signs",
+        "death within days of symptom onset"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "mosquito exposure",
+        "travel to endemic zones",
+        "jungle exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.4
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "year-round in tropical zones",
+        "rainy season peak"
+      ],
+      "notes": "Vaccination is highly effective prevention; critical to update status"
+    },
+    {
+      "id": "lassa_fever",
+      "condition": "Lassa Fever",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "fatigue",
+        "weakness",
+        "headache",
+        "sore throat",
+        "chest pain",
+        "nausea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "bleeding",
+        "severe hemorrhage",
+        "shock",
+        "organ failure",
+        "death"
+      ],
+      "riskFactors": [
+        "contact with infected rodents",
+        "rural living in endemic areas",
+        "healthcare worker exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 1.05,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry season peak", "December-March high"],
+      "notes": "Medical emergency with high mortality; early recognition essential"
+    },
+    {
+      "id": "meningitis_bact",
+      "condition": "Bacterial Meningitis (African Meningitis Belt)",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "severe headache",
+        "high fever",
+        "stiff neck",
+        "confusion",
+        "rash",
+        "sensitivity to light",
+        "nausea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "petechial rash",
+        "altered consciousness",
+        "seizures",
+        "shock",
+        "rapid progression to death"
+      ],
+      "riskFactors": [
+        "crowded living",
+        "dry season wind exposure",
+        "young age",
+        "no meningitis vaccination"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 1.4,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "dry season peak",
+        "harmattan winds increase risk"
+      ],
+      "notes": "Medical emergency; vaccination critical in meningitis belt regions"
+    },
+    {
+      "id": "schistosomiasis",
+      "condition": "Schistosomiasis",
+      "category": "infectious_disease",
+      "subRegionRelevance": [
+        "West Africa",
+        "East Africa",
+        "Central Africa",
+        "Southern Africa"
+      ],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "itching",
+        "rash",
+        "fever",
+        "abdominal pain",
+        "diarrhea",
+        "blood in urine",
+        "bloody stools",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "severe bleeding",
+        "organ damage signs",
+        "splenomegaly",
+        "portal hypertension indicators"
+      ],
+      "riskFactors": [
+        "freshwater exposure",
+        "swimming in rivers",
+        "agricultural work in endemic areas",
+        "no water treatment"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.4,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "year-round in endemic waters",
+        "higher in rainy season"
+      ],
+      "notes": "Preventive education on water safety; treatment available"
+    },
+    {
+      "id": "onchocerciasis",
+      "condition": "River Blindness (Onchocerciasis)",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "Central Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "intense itching",
+        "skin nodules",
+        "skin depigmentation",
+        "visual impairment",
+        "rash on face",
+        "groin lumps"
+      ],
+      "redFlagSymptoms": [
+        "progressive blindness",
+        "severe vision loss",
+        "extensive skin changes"
+      ],
+      "riskFactors": [
+        "blackfly-infested river areas",
+        "rural agricultural work",
+        "long-term exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round water exposure risk"],
+      "notes": "Preventive treatment programs available; community distribution key"
+    },
+    {
+      "id": "measles",
+      "condition": "Measles",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "high fever",
+        "cough",
+        "runny nose",
+        "conjunctivitis",
+        "koplik spots",
+        "maculopapular rash",
+        "malaise"
+      ],
+      "redFlagSymptoms": [
+        "severe pneumonia",
+        "encephalitis signs",
+        "severe diarrhea",
+        "croup",
+        "secondary infections"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "vitamin A deficiency",
+        "malnutrition",
+        "crowded living",
+        "young age"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "dry season peaks",
+        "year-round circulation"
+      ],
+      "notes": "Vaccine-preventable; vitamin A supplementation reduces mortality"
+    },
+    {
+      "id": "polio",
+      "condition": "Poliomyelitis",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["West Africa", "Central Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "fatigue",
+        "headache",
+        "muscle pain",
+        "stiffness",
+        "flaccid paralysis",
+        "asymmetric weakness"
+      ],
+      "redFlagSymptoms": [
+        "acute flaccid paralysis",
+        "respiratory muscle paralysis",
+        "bulbar palsy"
+      ],
+      "riskFactors": [
+        "no polio vaccination",
+        "poor sanitation",
+        "crowded areas",
+        "immunocompromised"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 1.2,
+        "15-50": 0.9,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk in endemic areas"],
+      "notes": "Vaccine-preventable; vaccination campaigns critical"
+    },
+    {
+      "id": "hepatitis_b",
+      "condition": "Hepatitis B",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "jaundice",
+        "dark urine",
+        "pale stools",
+        "abdominal pain",
+        "fever",
+        "fatigue",
+        "nausea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "fulminant hepatic failure",
+        "ascites",
+        "hepatic encephalopathy",
+        "bleeding"
+      ],
+      "riskFactors": [
+        "unprotected sexual contact",
+        "blood transfusion",
+        "needle sharing",
+        "vertical transmission",
+        "healthcare exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "Vaccine available at birth; preventive screening recommended"
+    },
+    {
+      "id": "hepatitis_c",
+      "condition": "Hepatitis C",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "often asymptomatic",
+        "fatigue",
+        "jaundice",
+        "dark urine",
+        "pale stools",
+        "abdominal pain",
+        "nausea"
+      ],
+      "redFlagSymptoms": [
+        "cirrhosis signs",
+        "portal hypertension",
+        "hepatocellular carcinoma indicators",
+        "ascites"
+      ],
+      "riskFactors": [
+        "blood transfusion",
+        "needle sharing",
+        "unsafe injections",
+        "healthcare exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 0.9,
+        "5-15": 0.9,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "Often chronic; early detection allows treatment; preventive screening for high-risk groups"
+    },
+    {
+      "id": "rabies",
+      "condition": "Rabies",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "itching at bite site",
+        "agitation",
+        "hydrophobia",
+        "aerophobia",
+        "confusion",
+        "hallucinations",
+        "spasms"
+      ],
+      "redFlagSymptoms": [
+        "hydrophobia",
+        "aerophobia",
+        "encephalitis signs",
+        "death once symptomatic"
+      ],
+      "riskFactors": [
+        "dog bite",
+        "wild animal exposure",
+        "bat contact",
+        "no post-exposure prophylaxis"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Medical emergency; post-exposure prophylaxis must be given before symptoms; preventive dog control programs"
+    },
+    {
+      "id": "covid_respiratory",
+      "condition": "COVID-19 Related Respiratory Illness",
+      "category": "infectious_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "cough",
+        "fatigue",
+        "loss of taste or smell",
+        "sore throat",
+        "shortness of breath",
+        "headache",
+        "muscle aches"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory distress",
+        "low oxygen saturation",
+        "chest pain",
+        "confusion",
+        "sepsis signs"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "crowded living",
+        "healthcare exposure",
+        "chronic underlying conditions",
+        "advanced age"
+      ],
+      "ageWeighting": {
+        "0-5": 0.7,
+        "5-15": 0.8,
+        "15-50": 1.0,
+        "50+": 1.5
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "year-round circulation",
+        "variants emerging"
+      ],
+      "notes": "Vaccination strongly protective; preventive measures still important in low-vaccination settings"
+    },
+    {
+      "id": "hypertension",
+      "condition": "Hypertension",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "often asymptomatic",
+        "headache",
+        "dizziness",
+        "chest discomfort",
+        "shortness of breath",
+        "epistaxis",
+        "blurred vision"
+      ],
+      "redFlagSymptoms": [
+        "hypertensive crisis",
+        "severe headache with vision changes",
+        "chest pain",
+        "breath shortness",
+        "confusion"
+      ],
+      "riskFactors": [
+        "obesity",
+        "salt intake",
+        "alcohol use",
+        "stress",
+        "sedentary lifestyle",
+        "family history",
+        "advanced age"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.3,
+        "15-50": 1.0,
+        "50+": 1.5
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["cold season higher readings"],
+      "notes": "Silent killer; preventive screening critical; lifestyle modification is primary prevention"
+    },
+    {
+      "id": "type2_diabetes",
+      "condition": "Type 2 Diabetes Mellitus",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "increased thirst",
+        "frequent urination",
+        "fatigue",
+        "blurred vision",
+        "slow-healing wounds",
+        "numbness in extremities",
+        "weight loss"
+      ],
+      "redFlagSymptoms": [
+        "diabetic ketoacidosis signs",
+        "hypoglycemic shock",
+        "severe infections",
+        "vision loss",
+        "kidney failure signs"
+      ],
+      "riskFactors": [
+        "obesity",
+        "family history",
+        "sedentary lifestyle",
+        "high sugar diet",
+        "advanced age",
+        "gestational diabetes history"
+      ],
+      "ageWeighting": {
+        "0-5": 0.05,
+        "5-15": 0.1,
+        "15-50": 1.0,
+        "50+": 1.8
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round prevalence"],
+      "notes": "Rapidly rising in Africa; preventive screening and lifestyle changes are key"
+    },
+    {
+      "id": "stroke",
+      "condition": "Stroke (Cerebrovascular Accident)",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "sudden face drooping",
+        "arm weakness",
+        "speech difficulty",
+        "sudden severe headache",
+        "vision loss",
+        "dizziness",
+        "loss of balance"
+      ],
+      "redFlagSymptoms": [
+        "sudden onset severe symptoms",
+        "loss of consciousness",
+        "severe headache",
+        "respiratory difficulty"
+      ],
+      "riskFactors": [
+        "hypertension",
+        "atrial fibrillation",
+        "diabetes",
+        "smoking",
+        "obesity",
+        "age",
+        "family history",
+        "previous stroke"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.2,
+        "15-50": 1.0,
+        "50+": 1.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["winter months slightly higher"],
+      "notes": "Medical emergency; time-critical; preventive focus on risk factor control"
+    },
+    {
+      "id": "heart_failure",
+      "condition": "Heart Failure",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "shortness of breath",
+        "fatigue",
+        "swollen ankles",
+        "weight gain",
+        "difficulty lying flat",
+        "palpitations",
+        "chest discomfort"
+      ],
+      "redFlagSymptoms": [
+        "acute respiratory distress",
+        "pulmonary edema",
+        "cardiogenic shock",
+        "severe hypotension"
+      ],
+      "riskFactors": [
+        "hypertension",
+        "previous heart attack",
+        "diabetes",
+        "obesity",
+        "smoking",
+        "alcohol abuse",
+        "age"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.2,
+        "15-50": 1.0,
+        "50+": 1.6
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round prevalence"],
+      "notes": "Preventive focus on hypertension and diabetes management"
+    },
+    {
+      "id": "chronic_kidney_disease",
+      "condition": "Chronic Kidney Disease",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fatigue",
+        "swelling in ankles and feet",
+        "nausea",
+        "difficulty concentrating",
+        "muscle cramps",
+        "high blood pressure",
+        "anemia symptoms"
+      ],
+      "redFlagSymptoms": [
+        "severe hyperkalemia",
+        "pulmonary edema",
+        "pericarditis",
+        "kidney failure",
+        "uremic encephalopathy"
+      ],
+      "riskFactors": [
+        "diabetes",
+        "hypertension",
+        "glomerulonephritis",
+        "family history",
+        "obesity",
+        "smoking"
+      ],
+      "ageWeighting": {
+        "0-5": 0.2,
+        "5-15": 0.3,
+        "15-50": 1.0,
+        "50+": 1.5
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Silent progression; early detection through screening critical"
+    },
+    {
+      "id": "asthma",
+      "condition": "Asthma",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "wheezing",
+        "shortness of breath",
+        "chest tightness",
+        "dry cough especially at night",
+        "difficulty sleeping due to breathing"
+      ],
+      "redFlagSymptoms": [
+        "severe wheezing",
+        "severe shortness of breath at rest",
+        "inability to finish sentence",
+        "peak flow < 50%"
+      ],
+      "riskFactors": [
+        "allergies",
+        "air pollution",
+        "smoking exposure",
+        "family history",
+        "obesity",
+        "GERD",
+        "exercise"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "dry season exacerbations",
+        "pollution peaks increase symptoms"
+      ],
+      "notes": "Preventive management with inhalers can prevent exacerbations; trigger avoidance key"
+    },
+    {
+      "id": "copd",
+      "condition": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "persistent cough",
+        "shortness of breath",
+        "sputum production",
+        "chest discomfort",
+        "wheezing",
+        "fatigue",
+        "swollen ankles"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory distress",
+        "acute exacerbation",
+        "pneumonia",
+        "respiratory failure"
+      ],
+      "riskFactors": [
+        "smoking",
+        "air pollution",
+        "biomass fuel smoke",
+        "occupational exposure",
+        "prior TB",
+        "malnutrition"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.2,
+        "15-50": 1.0,
+        "50+": 1.6
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "dry season worsening",
+        "biomass burning increases risk"
+      ],
+      "notes": "Preventive focus on smoking cessation and air quality; occupational exposure reduction"
+    },
+    {
+      "id": "sickle_cell",
+      "condition": "Sickle Cell Disease",
+      "category": "genetic_blood_disorder",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "pain crisis episodes",
+        "fatigue",
+        "jaundice",
+        "swelling of hands and feet",
+        "frequent infections",
+        "delayed growth",
+        "vision problems"
+      ],
+      "redFlagSymptoms": [
+        "acute vaso-occlusive crisis",
+        "splenic sequestration",
+        "acute chest syndrome",
+        "stroke",
+        "sepsis"
+      ],
+      "riskFactors": [
+        "homozygous inheritance",
+        "both parents carriers",
+        "lack of prophylaxis",
+        "dehydration",
+        "stress",
+        "infection"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.7
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry season crises increase"],
+      "notes": "Genetic screening recommended; preventive penicillin prophylaxis in childhood"
+    },
+    {
+      "id": "g6pd_deficiency",
+      "condition": "G6PD Deficiency",
+      "category": "genetic_blood_disorder",
+      "subRegionRelevance": [
+        "West Africa",
+        "Central Africa",
+        "East Africa",
+        "Southern Africa"
+      ],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "jaundice",
+        "dark urine",
+        "pallor",
+        "fatigue",
+        "abdominal pain",
+        "hemoglobinuria",
+        "triggered by medications or foods"
+      ],
+      "redFlagSymptoms": [
+        "severe hemolytic crisis",
+        "acute renal failure",
+        "severe anemia",
+        "shock"
+      ],
+      "riskFactors": [
+        "genetic inheritance",
+        "certain medications",
+        "fava beans",
+        "infections",
+        "oxidative stress"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 0.5,
+        "male": 1.5,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["infection seasons trigger hemolysis"],
+      "notes": "Genetic screening helps; medication and food avoidance is prevention"
+    },
+    {
+      "id": "thalassemia",
+      "condition": "Thalassemia",
+      "category": "genetic_blood_disorder",
+      "subRegionRelevance": ["West Africa", "Central Africa", "North Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "severe anemia",
+        "jaundice",
+        "bone deformities",
+        "hepatosplenomegaly",
+        "growth delay",
+        "cardiac complications"
+      ],
+      "redFlagSymptoms": [
+        "cardiac failure",
+        "severe infections",
+        "severe anemia",
+        "transfusion complications"
+      ],
+      "riskFactors": [
+        "homozygous inheritance",
+        "carrier parents",
+        "lack of transfusion access",
+        "iron overload"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.6
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round management needed"],
+      "notes": "Genetic counseling important; transfusions and iron chelation as preventive"
+    },
+    {
+      "id": "preeclampsia",
+      "condition": "Preeclampsia",
+      "category": "maternal_reproductive_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "high blood pressure",
+        "proteinuria",
+        "headache",
+        "visual disturbances",
+        "upper abdominal pain",
+        "swelling",
+        "sudden weight gain"
+      ],
+      "redFlagSymptoms": [
+        "eclampsia with seizures",
+        "HELLP syndrome",
+        "pulmonary edema",
+        "placental abruption",
+        "fetal distress"
+      ],
+      "riskFactors": [
+        "primigravida",
+        "age > 35",
+        "multiple pregnancy",
+        "diabetes",
+        "hypertension",
+        "kidney disease",
+        "previous preeclampsia"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Regular prenatal screening critical; blood pressure monitoring ongoing"
+    },
+    {
+      "id": "postpartum_hemorrhage",
+      "condition": "Postpartum Hemorrhage",
+      "category": "maternal_reproductive_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "excessive vaginal bleeding",
+        "dizziness",
+        "rapid heartbeat",
+        "pale skin",
+        "shock signs",
+        "blood clots"
+      ],
+      "redFlagSymptoms": [
+        "shock",
+        "loss of consciousness",
+        "massive bleeding",
+        "organ failure"
+      ],
+      "riskFactors": [
+        "prolonged labor",
+        "multiple pregnancy",
+        "previous hemorrhage",
+        "uterine atony",
+        "preeclampsia",
+        "anemia",
+        "manual placental extraction"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Medical emergency; skilled birth attendance crucial; blood availability critical"
+    },
+    {
+      "id": "ectopic_pregnancy",
+      "condition": "Ectopic Pregnancy",
+      "category": "maternal_reproductive_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abnormal vaginal bleeding",
+        "pelvic pain",
+        "shoulder pain",
+        "dizziness",
+        "shock signs if ruptured"
+      ],
+      "redFlagSymptoms": [
+        "sudden severe pain",
+        "massive internal bleeding",
+        "shock",
+        "loss of consciousness"
+      ],
+      "riskFactors": [
+        "pelvic inflammatory disease",
+        "endometriosis",
+        "previous ectopic",
+        "STI history",
+        "intrauterine device use"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Medical emergency; early ultrasound detection saves lives"
+    },
+    {
+      "id": "unsafe_abortion_complications",
+      "condition": "Unsafe Abortion Complications",
+      "category": "maternal_reproductive_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "heavy vaginal bleeding",
+        "severe abdominal pain",
+        "fever",
+        "chills",
+        "shock signs",
+        "uterine perforation signs"
+      ],
+      "redFlagSymptoms": [
+        "sepsis",
+        "peritonitis",
+        "hemorrhagic shock",
+        "organ failure"
+      ],
+      "riskFactors": [
+        "lack of access to safe services",
+        "socioeconomic constraints",
+        "legal restrictions",
+        "low health literacy"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.05,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Public health emergency; access to safe services critical prevention"
+    },
+    {
+      "id": "pelvic_infections",
+      "condition": "Pelvic Inflammatory Disease",
+      "category": "maternal_reproductive_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "lower abdominal pain",
+        "fever",
+        "abnormal discharge",
+        "pain during intercourse",
+        "dysuria",
+        "abnormal bleeding"
+      ],
+      "redFlagSymptoms": [
+        "tubo-ovarian abscess",
+        "peritonitis",
+        "sepsis",
+        "infertility complications"
+      ],
+      "riskFactors": [
+        "untreated STIs",
+        "multiple partners",
+        "young age",
+        "poor hygiene",
+        "unsafe abortion"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.01,
+        "15-50": 1.0,
+        "50+": 0.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "STI prevention and early treatment key; impacts fertility"
+    },
+    {
+      "id": "severe_acute_malnutrition",
+      "condition": "Severe Acute Malnutrition (SAM)",
+      "category": "pediatric_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "extreme thinness",
+        "wasting",
+        "weakness",
+        "lethargy",
+        "edema",
+        "skin changes",
+        "frequent infections"
+      ],
+      "redFlagSymptoms": [
+        "kwashiorkor",
+        "marasmus",
+        "severe infections",
+        "organ failure",
+        "death"
+      ],
+      "riskFactors": [
+        "poverty",
+        "food insecurity",
+        "infection",
+        "inadequate infant feeding",
+        "drought",
+        "conflict"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 1.1,
+        "15-50": 0.8,
+        "50+": 0.7
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "dry season peaks",
+        "hunger season increases"
+      ],
+      "notes": "Nutritional rehabilitation programs critical; prevention through food security"
+    },
+    {
+      "id": "neonatal_sepsis",
+      "condition": "Neonatal Sepsis",
+      "category": "pediatric_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever or hypothermia",
+        "poor feeding",
+        "lethargy",
+        "irritability",
+        "respiratory distress",
+        "jaundice",
+        "seizures"
+      ],
+      "redFlagSymptoms": ["shock", "meningitis", "organ failure", "death"],
+      "riskFactors": [
+        "prolonged rupture of membranes",
+        "maternal fever",
+        "prematurity",
+        "low birth weight",
+        "poor hygiene during delivery"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 0.1,
+        "15-50": 0.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Early recognition and treatment critical; skilled birth attendance prevention"
+    },
+    {
+      "id": "childhood_pneumonia",
+      "condition": "Childhood Pneumonia",
+      "category": "pediatric_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "cough",
+        "fast breathing",
+        "chest indrawing",
+        "fever",
+        "difficulty feeding",
+        "lethargy",
+        "nasal flaring"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory distress",
+        "stridor",
+        "confusion",
+        "convulsions",
+        "cyanosis"
+      ],
+      "riskFactors": [
+        "malnutrition",
+        "no vaccination",
+        "air pollution",
+        "crowding",
+        "prematurity",
+        "immunodeficiency"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.0,
+        "15-50": 0.5,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "cold season peaks",
+        "dry season exacerbations"
+      ],
+      "notes": "Vaccination prevents many cases; early antibiotics save lives in resource-limited settings"
+    },
+    {
+      "id": "rotavirus",
+      "condition": "Rotavirus Infection",
+      "category": "pediatric_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "watery diarrhea",
+        "vomiting",
+        "fever",
+        "abdominal pain",
+        "dehydration",
+        "lethargy",
+        "reduced urine output"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "shock",
+        "acute renal failure",
+        "encephalopathy"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "poor sanitation",
+        "contaminated food/water",
+        "crowding",
+        "young age"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 0.9,
+        "15-50": 0.1,
+        "50+": 0.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "cool/dry season peak",
+        "year-round circulation"
+      ],
+      "notes": "Vaccine highly effective; oral rehydration therapy is cornerstone treatment"
+    },
+    {
+      "id": "heat_stroke",
+      "condition": "Heat Stroke",
+      "category": "environmental_occupational",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "high body temperature",
+        "altered mental state",
+        "hot dry skin",
+        "rapid pulse",
+        "nausea",
+        "dizziness",
+        "headache",
+        "muscle weakness"
+      ],
+      "redFlagSymptoms": [
+        "seizures",
+        "loss of consciousness",
+        "organ failure",
+        "death"
+      ],
+      "riskFactors": [
+        "extreme heat exposure",
+        "outdoor labor",
+        "no rest",
+        "dehydration",
+        "poor nutrition",
+        "age",
+        "pre-existing conditions"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.0,
+        "15-50": 1.2,
+        "50+": 1.4
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["hot season peak", "extreme heat waves"],
+      "notes": "Preventive: rest, hydration, shade; emergency cooling critical"
+    },
+    {
+      "id": "dehydration",
+      "condition": "Dehydration",
+      "category": "environmental_occupational",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "thirst",
+        "dry mouth",
+        "dizziness",
+        "reduced urine output",
+        "dark urine",
+        "fatigue",
+        "weakness",
+        "sunken eyes"
+      ],
+      "redFlagSymptoms": [
+        "shock",
+        "loss of consciousness",
+        "organ failure",
+        "seizures"
+      ],
+      "riskFactors": [
+        "diarrhea or vomiting",
+        "heat exposure",
+        "insufficient water intake",
+        "malaria",
+        "diabetes",
+        "diuretic use"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry and hot season peaks"],
+      "notes": "Preventive: regular fluid intake; oral rehydration for mild cases"
+    },
+    {
+      "id": "occupational_lung_disease",
+      "condition": "Occupational Lung Disease (Mining, Dust Exposure)",
+      "category": "environmental_occupational",
+      "subRegionRelevance": [
+        "Southern Africa",
+        "West Africa",
+        "Central Africa"
+      ],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "chronic cough",
+        "shortness of breath",
+        "chest pain",
+        "wheezing",
+        "sputum production",
+        "fatigue",
+        "reduced exercise tolerance"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory distress",
+        "pneumonia",
+        "respiratory failure",
+        "cor pulmonale"
+      ],
+      "riskFactors": [
+        "mining work",
+        "quarrying",
+        "metal smelting",
+        "no protective equipment",
+        "long exposure duration"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.2,
+        "15-50": 1.3,
+        "50+": 1.5
+      },
+      "genderWeighting": {
+        "female": 0.8,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round occupational exposure"],
+      "notes": "Preventive: occupational safety, dust masks, ventilation"
+    },
+    {
+      "id": "lead_poisoning",
+      "condition": "Lead Poisoning",
+      "category": "environmental_occupational",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "anemia",
+        "constipation",
+        "abdominal pain",
+        "developmental delay in children",
+        "cognitive impairment",
+        "behavioral changes",
+        "weakness"
+      ],
+      "redFlagSymptoms": ["acute encephalopathy", "seizures", "coma", "death"],
+      "riskFactors": [
+        "occupational exposure",
+        "contaminated water",
+        "old paint",
+        "traditional cosmetics",
+        "mining areas",
+        "young age"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round exposure risk"],
+      "notes": "No safe level; prevention through source reduction key"
+    },
+    {
+      "id": "trauma_injuries",
+      "condition": "Trauma Injuries (Conflict/Displacement)",
+      "category": "conflict_displacement",
+      "subRegionRelevance": ["Central Africa", "West Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "pain",
+        "bleeding",
+        "swelling",
+        "limited mobility",
+        "shock signs",
+        "altered consciousness",
+        "visible wounds"
+      ],
+      "redFlagSymptoms": [
+        "severe bleeding",
+        "shock",
+        "organ damage",
+        "spinal injury",
+        "head trauma with altered mental status"
+      ],
+      "riskFactors": [
+        "conflict exposure",
+        "displacement camps",
+        "violence",
+        "road accidents",
+        "landmines"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.2,
+        "15-50": 1.3,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in conflict zones"],
+      "notes": "First aid critical; emergency medical care essential"
+    },
+    {
+      "id": "ptsd_symptoms",
+      "condition": "PTSD-Like Symptoms (Conflict/Displacement)",
+      "category": "conflict_displacement",
+      "subRegionRelevance": ["Central Africa", "West Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "hypervigilance",
+        "flashbacks",
+        "insomnia",
+        "anxiety",
+        "depression",
+        "emotional numbness",
+        "avoidance",
+        "irritability"
+      ],
+      "redFlagSymptoms": [
+        "suicidal ideation",
+        "severe self-harm",
+        "violent outbursts",
+        "complete functional impairment"
+      ],
+      "riskFactors": [
+        "conflict exposure",
+        "loss of family",
+        "displacement",
+        "torture experience",
+        "sexual violence"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round mental health impact"],
+      "notes": "Mental health screening important; psychological support critical"
+    },
+    {
+      "id": "waterborne_outbreaks",
+      "condition": "Waterborne Disease Outbreaks (Camps/Displacement)",
+      "category": "conflict_displacement",
+      "subRegionRelevance": ["Central Africa", "West Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "diarrhea",
+        "vomiting",
+        "abdominal cramps",
+        "fever",
+        "dehydration",
+        "malaise",
+        "rapid-onset symptoms in populations"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "bloody diarrhea",
+        "high fever",
+        "shock",
+        "rapid outbreak spread"
+      ],
+      "riskFactors": [
+        "poor water access",
+        "sanitation breakdown",
+        "overcrowding",
+        "malnutrition",
+        "displacement camps"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "rainy season peaks",
+        "flooding increases risk"
+      ],
+      "notes": "Public health emergency; water treatment and sanitation critical prevention"
+    },
+    {
+      "id": "breast_cancer",
+      "condition": "Breast Cancer",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "breast lump",
+        "breast pain",
+        "nipple discharge",
+        "skin dimpling",
+        "nipple retraction",
+        "breast swelling",
+        "skin redness"
+      ],
+      "redFlagSymptoms": [
+        "large tumor",
+        "lymph node enlargement",
+        "metastatic symptoms",
+        "advanced presentation"
+      ],
+      "riskFactors": [
+        "age",
+        "family history",
+        "nulliparity",
+        "late menopause",
+        "obesity",
+        "alcohol use",
+        "hormone therapy"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.01,
+        "15-50": 1.0,
+        "50+": 1.5
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.05,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "Preventive screening in high-risk women; self-examination awareness"
+    },
+    {
+      "id": "cervical_cancer",
+      "condition": "Cervical Cancer",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abnormal vaginal bleeding",
+        "abnormal discharge",
+        "pelvic pain",
+        "pain during intercourse",
+        "post-menopausal bleeding"
+      ],
+      "redFlagSymptoms": [
+        "heavy bleeding",
+        "fistula formation",
+        "advanced cancer symptoms"
+      ],
+      "riskFactors": [
+        "HPV infection",
+        "early sexual debut",
+        "multiple partners",
+        "smoking",
+        "immunosuppression",
+        "no screening"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.001,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "HPV vaccination and screening critical prevention"
+    },
+    {
+      "id": "prostate_conditions",
+      "condition": "Prostate Conditions (BPH, Prostatitis, Cancer)",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "difficulty urinating",
+        "frequent urination",
+        "weak stream",
+        "nocturia",
+        "pelvic pain",
+        "sexual dysfunction",
+        "blood in urine"
+      ],
+      "redFlagSymptoms": [
+        "urinary retention",
+        "renal failure",
+        "advanced cancer symptoms",
+        "spinal cord compression"
+      ],
+      "riskFactors": [
+        "age",
+        "family history",
+        "smoking",
+        "obesity",
+        "STI history"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 0.3,
+        "50+": 1.4
+      },
+      "genderWeighting": {
+        "female": 0.0,
+        "male": 1.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "Preventive screening in men > 50; symptom awareness important"
+    },
+    {
+      "id": "obesity_related",
+      "condition": "Obesity-Related Conditions",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "excess weight",
+        "shortness of breath",
+        "joint pain",
+        "sleep apnea",
+        "skin infections",
+        "reduced mobility",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "metabolic syndrome",
+        "severe sleep apnea",
+        "obesity-related conditions complications"
+      ],
+      "riskFactors": [
+        "high-calorie diet",
+        "sedentary lifestyle",
+        "genetics",
+        "low physical activity",
+        "poor sleep",
+        "stress"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Lifestyle modification primary prevention; weight loss reduces comorbidity risk"
+    },
+    {
+      "id": "neonatal_jaundice",
+      "condition": "Neonatal Jaundice (Hyperbilirubinemia)",
+      "category": "newborn_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "yellowing of skin",
+        "yellowing of whites of eyes",
+        "poor feeding",
+        "lethargy",
+        "high-pitched cry",
+        "fever"
+      ],
+      "redFlagSymptoms": [
+        "kernicterus signs",
+        "severe lethargy",
+        "poor feeding",
+        "seizures",
+        "hypertonia or hypotonia",
+        "bulging fontanelle"
+      ],
+      "riskFactors": [
+        "prematurity",
+        "low birth weight",
+        "breastfeeding difficulties",
+        "hemolytic disease",
+        "infection",
+        "G6PD deficiency",
+        "maternal-fetal blood group incompatibility"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 0.1,
+        "15-50": 0.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["more common in premature infants"],
+      "notes": "Early detection and phototherapy can prevent severe complications; daily monitoring in first week critical"
+    },
+    {
+      "id": "birth_asphyxia",
+      "condition": "Birth Asphyxia",
+      "category": "newborn_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "absent or weak cry",
+        "poor responsiveness",
+        "poor muscle tone",
+        "abnormal heart rate",
+        "slow or absent breathing",
+        "blue discoloration",
+        "seizures"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory depression",
+        "seizures",
+        "organ failure",
+        "hypoxic-ischemic encephalopathy",
+        "death"
+      ],
+      "riskFactors": [
+        "prolonged labor",
+        "meconium aspiration",
+        "cord prolapse",
+        "maternal exhaustion",
+        "lack of fetal monitoring",
+        "instrumental delivery complications",
+        "unskilled birth attendance"
+      ],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 0.0,
+        "15-50": 0.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Medical emergency; immediate resuscitation critical; skilled birth attendance prevention"
+    },
+    {
+      "id": "prematurity_complications",
+      "condition": "Prematurity and Low Birth Weight Complications",
+      "category": "newborn_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "small body size",
+        "immature features",
+        "weak suck",
+        "difficulty maintaining body temperature",
+        "respiratory distress",
+        "feeding difficulties",
+        "frequent infections"
+      ],
+      "redFlagSymptoms": [
+        "respiratory distress syndrome",
+        "intraventricular hemorrhage",
+        "necrotizing enterocolitis",
+        "retinopathy of prematurity",
+        "chronic lung disease",
+        "sepsis"
+      ],
+      "riskFactors": [
+        "maternal infection",
+        "preeclampsia",
+        "multiple pregnancy",
+        "maternal smoking",
+        "drug use",
+        "poor nutrition",
+        "lack of prenatal care"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 0.2,
+        "15-50": 0.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Kangaroo mother care highly effective in resource-limited settings; temperature maintenance critical"
+    },
+    {
+      "id": "congenital_anomalies",
+      "condition": "Congenital Anomalies",
+      "category": "newborn_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "structural defects at birth",
+        "cleft lip or palate",
+        "spina bifida signs",
+        "cardiac murmur",
+        "developmental delay",
+        "feeding difficulties",
+        "respiratory distress"
+      ],
+      "redFlagSymptoms": [
+        "severe malformation",
+        "incompatible with life",
+        "surgical emergency",
+        "severe feeding/breathing dysfunction"
+      ],
+      "riskFactors": [
+        "maternal folate deficiency",
+        "maternal infections",
+        "maternal diabetes",
+        "medication exposure",
+        "alcohol use",
+        "family history",
+        "malnutrition"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.1,
+        "15-50": 0.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round occurrence"],
+      "notes": "Prenatal folic acid supplementation prevents many neural tube defects; early surgical evaluation important"
+    },
+    {
+      "id": "african_trypanosomiasis",
+      "condition": "African Trypanosomiasis (Sleeping Sickness)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "joint pain",
+        "rash",
+        "swollen lymph nodes",
+        "insomnia",
+        "behavioral changes",
+        "poor coordination",
+        "sleep pattern disruption"
+      ],
+      "redFlagSymptoms": [
+        "progressive neurological decline",
+        "coma",
+        "severe behavioral changes",
+        "untreated death"
+      ],
+      "riskFactors": [
+        "tsetse fly exposure",
+        "rural agricultural work",
+        "bush travel",
+        "lack of protective measures"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry season risk in certain zones"],
+      "notes": "Rare but serious; early detection and treatment critical; travel precautions important"
+    },
+    {
+      "id": "guinea_worm",
+      "condition": "Guinea Worm Disease (Dracunculiasis)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "burning pain",
+        "blister formation",
+        "worm protrusion through skin",
+        "secondary infection",
+        "fever",
+        "swelling",
+        "difficulty walking"
+      ],
+      "redFlagSymptoms": [
+        "severe secondary infection",
+        "sepsis",
+        "permanent disability",
+        "tetanus infection"
+      ],
+      "riskFactors": [
+        "contaminated water",
+        "poor water quality",
+        "rural water access",
+        "no water filtration",
+        "drinking from stagnant water"
+      ],
+      "ageWeighting": {
+        "0-5": 0.9,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [
+        "dry season peak when water sources limited"
+      ],
+      "notes": "Nearly eradicated; prevention through water filtering and boiling critical"
+    },
+    {
+      "id": "lymphatic_filariasis",
+      "condition": "Lymphatic Filariasis (Elephantiasis)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "lymph node swelling",
+        "limb swelling",
+        "skin thickening",
+        "itching",
+        "genital swelling",
+        "tissue deformation"
+      ],
+      "redFlagSymptoms": [
+        "severe lymphedema",
+        "elephantiasis",
+        "genital deformity",
+        "severe disability",
+        "secondary infection"
+      ],
+      "riskFactors": [
+        "mosquito exposure",
+        "endemic areas",
+        "repeated infections",
+        "no preventive treatment"
+      ],
+      "ageWeighting": {
+        "0-5": 0.7,
+        "5-15": 1.0,
+        "15-50": 1.1,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["mosquito season peak"],
+      "notes": "Mass drug administration programs available; mosquito prevention important"
+    },
+    {
+      "id": "buruli_ulcer",
+      "condition": "Buruli Ulcer",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "painless nodule",
+        "shallow ulcer",
+        "dark undermined edges",
+        "swelling around lesion",
+        "enlarged lymph nodes",
+        "progressive ulceration"
+      ],
+      "redFlagSymptoms": [
+        "large ulcers",
+        "joint involvement",
+        "contraction complications",
+        "severe scarring and disability"
+      ],
+      "riskFactors": [
+        "exposure to contaminated water",
+        "rural water contact",
+        "poor wound care",
+        "malnutrition",
+        "immunosuppression"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Early dihydroxybenzamide treatment effective; lesion care prevents complications"
+    },
+    {
+      "id": "jiggers_tungiasis",
+      "condition": "Tungiasis (Jiggers)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "itching",
+        "burning pain on feet",
+        "black necrotic center on skin",
+        "swelling around lesion",
+        "difficulty walking",
+        "secondary infection",
+        "worm visible in lesion"
+      ],
+      "redFlagSymptoms": [
+        "severe secondary infection",
+        "gangrene",
+        "permanent disability",
+        "tetanus risk"
+      ],
+      "riskFactors": [
+        "walking barefoot",
+        "sand/soil contact",
+        "poor sanitation",
+        "poverty",
+        "crowded living"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.7
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm season peak"],
+      "notes": "Prevention through footwear and environmental control; early extraction prevents complications"
+    },
+    {
+      "id": "amoebic_dysentery",
+      "condition": "Amoebic Dysentery",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "bloody diarrhea",
+        "abdominal pain",
+        "cramps",
+        "fever",
+        "weight loss",
+        "tenesmus",
+        "mucoid diarrhea"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "bloody diarrhea with fever",
+        "intestinal perforation",
+        "hepatic abscess",
+        "shock"
+      ],
+      "riskFactors": [
+        "contaminated water",
+        "poor sanitation",
+        "poor hygiene",
+        "crowding",
+        "malnutrition"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Antimicrobial treatment effective; water treatment prevention; differentiation from bacterial dysentery important"
+    },
+    {
+      "id": "african_tick_fever",
+      "condition": "African Tick Bite Fever (ATBF)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["Southern Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "muscle aches",
+        "eschar at bite site",
+        "rash",
+        "lymph node enlargement",
+        "nausea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "severe systemic disease",
+        "meningoencephalitis",
+        "myocarditis",
+        "organ involvement"
+      ],
+      "riskFactors": [
+        "tick exposure",
+        "outdoor activities",
+        "safari travel",
+        "bush exposure",
+        "poor hygiene practices"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm season tick activity peak"],
+      "notes": "Antibiotic responsive; prevention through tick prevention; early treatment important"
+    },
+    {
+      "id": "toxoplasmosis_opportunistic",
+      "condition": "Toxoplasmosis (Opportunistic Infection)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["Southern Africa", "East Africa", "West Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "lymph node enlargement",
+        "headache",
+        "confusion",
+        "seizures",
+        "motor weakness",
+        "blurred vision"
+      ],
+      "redFlagSymptoms": [
+        "cerebral toxoplasmosis",
+        "seizures",
+        "coma",
+        "retinitis with vision loss",
+        "severe neurological complications"
+      ],
+      "riskFactors": [
+        "CD4 count < 100",
+        "no antiretroviral treatment",
+        "no prophylaxis",
+        "cat exposure",
+        "undercooked meat consumption"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 0.7,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in HIV+ populations"],
+      "notes": "Preventive prophylaxis in HIV+ patients with low CD4; treatment effective with early diagnosis"
+    },
+    {
+      "id": "cutaneous_leishmaniasis",
+      "condition": "Cutaneous Leishmaniasis",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "skin papule at bite site",
+        "slowly enlarging skin lesion",
+        "ulceration",
+        "central crust",
+        "multiple lesions",
+        "satellite lesions",
+        "painless unless infected"
+      ],
+      "redFlagSymptoms": [
+        "large ulcers",
+        "secondary infection",
+        "disfiguring lesions",
+        "widespread cutaneous involvement"
+      ],
+      "riskFactors": [
+        "sand fly exposure",
+        "rural areas",
+        "nocturnal outdoor activity",
+        "poor housing",
+        "malnutrition"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm/wet seasons peak"],
+      "notes": "Usually self-limiting; treatment prevents complications; scarring can be severe"
+    },
+    {
+      "id": "visceral_leishmaniasis",
+      "condition": "Visceral Leishmaniasis (Kala-azar)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["East Africa", "Central Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "weight loss",
+        "enlarged spleen",
+        "enlarged liver",
+        "abdominal swelling",
+        "weakness",
+        "dark skin discoloration"
+      ],
+      "redFlagSymptoms": [
+        "severe anemia",
+        "hemorrhage",
+        "secondary infections",
+        "organ failure",
+        "death if untreated"
+      ],
+      "riskFactors": [
+        "sand fly exposure",
+        "poverty",
+        "malnutrition",
+        "poor housing",
+        "immunosuppression"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry season peak"],
+      "notes": "Fatal if untreated; treatment available but access limited; prevention through vector control"
+    },
+    {
+      "id": "cryptococcal_meningitis",
+      "condition": "Cryptococcal Meningitis",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["Southern Africa", "East Africa", "West Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "neck stiffness",
+        "confusion",
+        "irritability",
+        "lethargy",
+        "photography sensitivity"
+      ],
+      "redFlagSymptoms": [
+        "altered consciousness",
+        "seizures",
+        "increased intracranial pressure",
+        "shock",
+        "death"
+      ],
+      "riskFactors": [
+        "CD4 count < 100",
+        "no antiretroviral therapy",
+        "no antifungal prophylaxis",
+        "environmental exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 0.7,
+        "5-15": 0.6,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in advanced HIV"],
+      "notes": "Major cause of meningitis deaths in Sub-Saharan Africa; early antifungal and ART critical"
+    },
+    {
+      "id": "gonorrhea_chlamydia",
+      "condition": "Gonorrhea and Chlamydia (STIs)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "urethral discharge",
+        "dysuria",
+        "frequency of urination",
+        "cervical discharge",
+        "pelvic pain",
+        "anorectal symptoms",
+        "pharyngeal symptoms"
+      ],
+      "redFlagSymptoms": [
+        "pelvic inflammatory disease",
+        "epididymitis",
+        "prostatitis",
+        "ectopic pregnancy risk",
+        "infertility"
+      ],
+      "riskFactors": [
+        "unprotected intercourse",
+        "multiple partners",
+        "young age",
+        "low condom use",
+        "low treatment access"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.01,
+        "15-50": 1.0,
+        "50+": 0.3
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "Often asymptomatic in women; antibiotic resistance emerging; partner notification important"
+    },
+    {
+      "id": "syphilis_congenital",
+      "condition": "Syphilis (Including Congenital)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "genital ulcer",
+        "inguinal lymphadenopathy",
+        "rash on palms and soles",
+        "generalized lymphadenopathy",
+        "fever",
+        "hepatomegaly",
+        "condyloma"
+      ],
+      "redFlagSymptoms": [
+        "neurosyphilis",
+        "congenital syphilis",
+        "cardiovascular syphilis",
+        "gummas",
+        "death"
+      ],
+      "riskFactors": [
+        "unprotected intercourse",
+        "multiple partners",
+        "non-treatment in pregnancy",
+        "low barrier protection use"
+      ],
+      "ageWeighting": {
+        "0-5": 0.3,
+        "5-15": 0.1,
+        "15-50": 1.0,
+        "50+": 0.5
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "Pregnancy screening and penicillin crucial for prevention; screening programs needed"
+    },
+    {
+      "id": "human_papillomavirus_hpv",
+      "condition": "Human Papillomavirus (HPV) Infections",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "genital warts",
+        "asymptomatic in many",
+        "cervical lesions",
+        "abnormal vaginal bleeding",
+        "anal lesions"
+      ],
+      "redFlagSymptoms": [
+        "high-grade dysplasia",
+        "cervical cancer progression",
+        "anal cancer",
+        "laryngeal papillomatosis in children"
+      ],
+      "riskFactors": [
+        "early sexual debut",
+        "multiple partners",
+        "smoking",
+        "immunosuppression",
+        "no vaccination"
+      ],
+      "ageWeighting": {
+        "0-5": 0.05,
+        "5-15": 0.1,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 0.8,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "Vaccination effective if given before sexual debut; screening prevents cancer"
+    },
+    {
+      "id": "hookworm_infection",
+      "condition": "Hookworm Infection (Soil-Transmitted Helminth)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "pruritus at infection site",
+        "anemia",
+        "fatigue",
+        "weakness",
+        "failure to thrive in children",
+        "abdominal pain",
+        "diarrhea"
+      ],
+      "redFlagSymptoms": [
+        "severe anemia",
+        "malnutrition",
+        "growth retardation",
+        "developmental delay"
+      ],
+      "riskFactors": [
+        "walking barefoot",
+        "poor sanitation",
+        "warm wet climate",
+        "crowded living",
+        "malnutrition"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.7
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm wet season peak"],
+      "notes": "Mass deworming programs effective; footwear and sanitation prevent infection"
+    },
+    {
+      "id": "ascaris_infection",
+      "condition": "Ascaris Infection (Soil-Transmitted Helminth)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "asymptomatic in light infections",
+        "abdominal discomfort",
+        "diarrhea",
+        "visible worms in stool",
+        "malnutrition",
+        "anemia",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "intestinal obstruction",
+        "biliary obstruction",
+        "pancreatic involvement",
+        "severe malnutrition"
+      ],
+      "riskFactors": [
+        "poor sanitation",
+        "contaminated food",
+        "poor hygiene",
+        "crowding",
+        "warm climate"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 0.6
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in endemic areas"],
+      "notes": "School-based deworming programs available; hygiene and sanitation prevention"
+    },
+    {
+      "id": "typhus_epidemic",
+      "condition": "Typhus (Epidemic and Endemic)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "myalgia",
+        "rash",
+        "conjunctival injection",
+        "eschar",
+        "splenomegaly"
+      ],
+      "redFlagSymptoms": [
+        "pneumonia",
+        "myocarditis",
+        "meningitis",
+        "multi-organ failure",
+        "death if untreated"
+      ],
+      "riskFactors": [
+        "louse infestation",
+        "flea exposure",
+        "mite exposure",
+        "crowding",
+        "poor hygiene",
+        "rodent exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["epidemic peak in refugee/crowded settings"],
+      "notes": "Antibiotic responsive; vector control important; hygiene prevention"
+    },
+    {
+      "id": "brucellosis",
+      "condition": "Brucellosis",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "sweats",
+        "malaise",
+        "headache",
+        "myalgia",
+        "arthralgia",
+        "depression",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "chronic brucellosis",
+        "endocarditis",
+        "neurobrucellosis",
+        "spinal involvement"
+      ],
+      "riskFactors": [
+        "livestock contact",
+        "unpasteurized dairy",
+        "occupational exposure",
+        "contact with infected animals"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 1.0,
+        "15-50": 1.1,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round occupational risk"],
+      "notes": "Prolonged antibiotic therapy required; occupational precautions important"
+    },
+    {
+      "id": "echinococcosis_hydatid",
+      "condition": "Echinococcosis (Hydatid Disease)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["Southern Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "asymptomatic in early stage",
+        "abdominal mass",
+        "abdominal pain",
+        "cyst symptoms depending on location",
+        "pulmonary cysts cause cough",
+        "anaphylaxis if cyst ruptures"
+      ],
+      "redFlagSymptoms": [
+        "cyst rupture/anaphylaxis",
+        "secondary infection",
+        "organ compression",
+        "respiratory compromise"
+      ],
+      "riskFactors": [
+        "dog exposure",
+        "livestock contact",
+        "ingestion of parasite-contaminated food",
+        "poor hygiene"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in endemic areas"],
+      "notes": "Often diagnosed late; surgical/percutaneous treatment options; dog deworming prevention"
+    },
+    {
+      "id": "cryptosporidiosis",
+      "condition": "Cryptosporidiosis",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "watery diarrhea",
+        "cramps",
+        "nausea",
+        "vomiting",
+        "fever",
+        "anorexia",
+        "malaise",
+        "dehydration"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "severe diarrhea in HIV patients",
+        "cholera-like in immunocompromised",
+        "malnutrition"
+      ],
+      "riskFactors": [
+        "contaminated water",
+        "poor sanitation",
+        "animal contact",
+        "immunodeficiency",
+        "crowding"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Self-limiting in immunocompetent; can be chronic in HIV with CD4<100; treatment limited"
+    },
+    {
+      "id": "vitamin_a_deficiency",
+      "condition": "Vitamin A Deficiency",
+      "category": "nutritional_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "night blindness",
+        "conjunctival xerosis",
+        "corneal xerosis",
+        "corneal scarring",
+        "blindness",
+        "frequent infections",
+        "delayed growth in children"
+      ],
+      "redFlagSymptoms": [
+        "corneal ulceration",
+        "corneal perforation",
+        "irreversible blindness",
+        "severe infections"
+      ],
+      "riskFactors": [
+        "malnutrition",
+        "poverty",
+        "food insecurity",
+        "lack of diversified diet",
+        "malabsorption",
+        "infections",
+        "measles",
+        "diarrhea"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.2,
+        "15-50": 0.8,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry season worse"],
+      "notes": "Supplementation programs critical; preventable cause of blindness"
+    },
+    {
+      "id": "iron_deficiency_anemia",
+      "condition": "Iron Deficiency Anemia",
+      "category": "nutritional_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fatigue",
+        "weakness",
+        "dyspnea",
+        "palpitations",
+        "pale conjunctivae",
+        "glossitis",
+        "koilonychia",
+        "developmental delay in children"
+      ],
+      "redFlagSymptoms": [
+        "cardiac complications",
+        "severe anemia",
+        "heart failure",
+        "cognitive impairment"
+      ],
+      "riskFactors": [
+        "poor diet",
+        "malabsorption",
+        "chronic blood loss",
+        "parasitic infections",
+        "malaria",
+        "pregnancy",
+        "adolescence"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.2,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Iron supplementation and parasitic treatment efficacious; dietary improvement important"
+    },
+    {
+      "id": "iodine_deficiency",
+      "condition": "Iodine Deficiency Disorder (Goiter, Cretinism)",
+      "category": "nutritional_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "neck swelling",
+        "hypothyroidism symptoms",
+        "lethargy",
+        "weight gain",
+        "dry skin",
+        "hair loss",
+        "developmental delay in children",
+        "cretinism"
+      ],
+      "redFlagSymptoms": [
+        "severe cretinism",
+        "severe neurological impairment",
+        "thyroid crisis",
+        "growth stunting"
+      ],
+      "riskFactors": [
+        "low iodine in soil",
+        "no iodized salt",
+        "isolated populations",
+        "poor nutrition",
+        "water contamination"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in endemic areas"],
+      "notes": "Iodized salt universalization prevents; supplements for deficiency areas"
+    },
+    {
+      "id": "acute_gastroenteritis",
+      "condition": "Acute Gastroenteritis (Non-Cholera Bacterial)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "acute diarrhea",
+        "abdominal cramps",
+        "nausea",
+        "vomiting",
+        "fever",
+        "dehydration",
+        "tenesmus"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "shock",
+        "bloody diarrhea",
+        "acute renal failure"
+      ],
+      "riskFactors": [
+        "contaminated food/water",
+        "poor hygiene",
+        "crowding",
+        "malnutrition",
+        "immunosuppression"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Oral rehydration cornerstone; judicious antibiotic use; sanitation prevention"
+    },
+    {
+      "id": "influenza",
+      "condition": "Influenza",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "cough",
+        "sore throat",
+        "head ache",
+        "myalgia",
+        "malaise",
+        "nasal congestion",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "pneumonia",
+        "respiratory failure",
+        "myocarditis",
+        "encephalopathy"
+      ],
+      "riskFactors": [
+        "crowding",
+        "contact with infected",
+        "poor ventilation",
+        "malnutrition",
+        "chronic disease",
+        "age extremes"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["cold season peak"],
+      "notes": "Vaccination available but limited access; supportive care primary; antivirals if available"
+    },
+    {
+      "id": "rheumatic_heart_disease",
+      "condition": "Rheumatic Heart Disease",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "dyspnea",
+        "chest pain",
+        "palpitations",
+        "syncope",
+        "orthopnea",
+        "fatigue",
+        "reduced exercise tolerance"
+      ],
+      "redFlagSymptoms": [
+        "heart failure",
+        "arrhythmia",
+        "thromboembolism",
+        "endocarditis",
+        "death"
+      ],
+      "riskFactors": [
+        "acute rheumatic fever history",
+        "streptococcal infection",
+        "crowding",
+        "poverty",
+        "malnutrition",
+        "no penicillin prophylaxis"
+      ],
+      "ageWeighting": {
+        "0-5": 0.2,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["streptococcal peaks determine risk"],
+      "notes": "Preventable through strep treatment; long-term penicillin prophylaxis for secondary prevention"
+    },
+    {
+      "id": "congestive_heart_failure",
+      "condition": "Congestive Heart Failure (Dilated Cardiomyopathy)",
+      "category": "non_communicable_disease",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "dyspnea",
+        "orthopnea",
+        "paroxysmal nocturnal dyspnea",
+        "peripheral edema",
+        "weight gain",
+        "fatigue",
+        "exercise intolerance"
+      ],
+      "redFlagSymptoms": [
+        "acute pulmonary edema",
+        "cardiogenic shock",
+        "severe arrhythmia"
+      ],
+      "riskFactors": [
+        "hypertension",
+        "coronary artery disease",
+        "rheumatic heart disease",
+        "chagas disease",
+        "alcohol use",
+        "infection"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.2,
+        "15-50": 1.0,
+        "50+": 1.4
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "Medication access critical; preventive risk factor management important"
+    },
+    {
+      "id": "chagas_disease",
+      "condition": "Chagas Disease (T. cruzi infection)",
+      "category": "sub_saharan_specific",
+      "subRegionRelevance": ["Central Africa", "Southern Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "malaise",
+        "rash",
+        "edema at bite site",
+        "hepatomegaly",
+        "splenomegaly",
+        "lymphadenopathy"
+      ],
+      "redFlagSymptoms": [
+        "myocarditis",
+        "heart failure",
+        "mega-esophagus",
+        "megacolon",
+        "stroke"
+      ],
+      "riskFactors": [
+        "contact with infected insects",
+        "poor housing",
+        "blood transfusion",
+        "breastfeeding",
+        "organ transplantation"
+      ],
+      "ageWeighting": {
+        "0-5": 0.9,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in endemic areas"],
+      "notes": "Early treatment (benznidazole) effective; chronic complications devastating; housing improvement prevention"
+    },
+    {
+      "id": "shigellosis",
+      "condition": "Shigellosis (Bacterial Dysentery)",
+      "category": "waterborne_foodborne",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "bloody diarrhea",
+        "severe abdominal cramps",
+        "fever",
+        "tenesmus",
+        "mucoid stools",
+        "dehydration",
+        "malaise"
+      ],
+      "redFlagSymptoms": [
+        "severe bloody diarrhea",
+        "severe dehydration",
+        "toxic megacolon",
+        "sepsis",
+        "hemolytic uremic syndrome"
+      ],
+      "riskFactors": [
+        "contaminated food/water",
+        "person-to-person transmission",
+        "poor sanitation",
+        "crowding",
+        "malnutrition"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Antibiotic resistance major concern; supportive care primary; sanitation critical"
+    },
+    {
+      "id": "hepatitis_a",
+      "condition": "Hepatitis A",
+      "category": "waterborne_foodborne",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "malaise",
+        "anorexia",
+        "nausea",
+        "vomiting",
+        "abdominal pain",
+        "jaundice",
+        "dark urine",
+        "pale stools"
+      ],
+      "redFlagSymptoms": [
+        "fulminant hepatic failure",
+        "encephalopathy",
+        "severe coagulopathy"
+      ],
+      "riskFactors": [
+        "contaminated food/water",
+        "poor sanitation",
+        "person-to-person transmission",
+        "no vaccination",
+        "travel to endemic areas"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round circulation"],
+      "notes": "Vaccine available; prevents disease; supportive care mainstay of treatment"
+    },
+    {
+      "id": "giardiasis",
+      "condition": "Giardiasis",
+      "category": "waterborne_foodborne",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "acute watery diarrhea",
+        "abdominal cramps",
+        "bloating",
+        "gas",
+        "nausea",
+        "chronic diarrhea in untreated",
+        "weight loss",
+        "malabsorption signs"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "malnutrition",
+        "failure to thrive",
+        "severe malabsorption"
+      ],
+      "riskFactors": [
+        "contaminated water",
+        "poor sanitation",
+        "person-to-person transmission",
+        "daycare/institution exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in endemic"],
+      "notes": "Metronidazole treatment effective; water treatment prevention key"
+    },
+    {
+      "id": "pertussis",
+      "condition": "Pertussis (Whooping Cough)",
+      "category": "airborne_respiratory",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "runny nose",
+        "sneezing",
+        "low-grade fever",
+        "mild cough",
+        "severe paroxysmal cough",
+        "whooping sound",
+        "post-cough vomiting",
+        "apnea in infants"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory distress",
+        "pneumonia",
+        "seizures",
+        "encephalopathy",
+        "apnea",
+        "death in infants"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "contact with infected",
+        "crowding",
+        "young age",
+        "immunosuppression"
+      ],
+      "ageWeighting": {
+        "0-5": 1.4,
+        "5-15": 1.0,
+        "15-50": 0.8,
+        "50+": 0.6
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round circulation"],
+      "notes": "Vaccine-preventable; early antibiotics reduce transmission; supportive care important"
+    },
+    {
+      "id": "diphtheria",
+      "condition": "Diphtheria",
+      "category": "airborne_respiratory",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "sore throat",
+        "fever",
+        "grayish membrane in throat",
+        "pseudomembrane",
+        "difficulty swallowing",
+        "respiratory obstruction",
+        "myocarditis signs"
+      ],
+      "redFlagSymptoms": [
+        "respiratory obstruction",
+        "myocarditis",
+        "neuritis",
+        "death"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "no booster",
+        "contact with infected",
+        "crowding",
+        "poor sanitation"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["cold season peaks"],
+      "notes": "Vaccine-preventable; antitoxin and antibiotics essential; rare in vaccinated"
+    },
+    {
+      "id": "legionella_pneumonia",
+      "condition": "Legionellosis",
+      "category": "airborne_respiratory",
+      "subRegionRelevance": ["Urban areas"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "high fever",
+        "cough",
+        "dyspnea",
+        "chest pain",
+        "confusion",
+        "diarrhea",
+        "myalgia",
+        "headache"
+      ],
+      "redFlagSymptoms": [
+        "severe pneumonia",
+        "respiratory failure",
+        "renal failure",
+        "sepsis"
+      ],
+      "riskFactors": [
+        "water system contamination",
+        "cooling towers",
+        "fountains",
+        "immunosuppression",
+        "older age"
+      ],
+      "ageWeighting": {
+        "0-5": 0.5,
+        "5-15": 0.4,
+        "15-50": 1.0,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["summer peak"],
+      "notes": "Antibiotic responsive; prevents through water system maintenance"
+    },
+    {
+      "id": "aspergillosis",
+      "condition": "Aspergillosis (Invasive)",
+      "category": "airborne_respiratory",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "cough",
+        "dyspnea",
+        "chest pain",
+        "hemoptysis",
+        "sinusitis signs",
+        "skin lesions"
+      ],
+      "redFlagSymptoms": [
+        "severe pneumonia",
+        "respiratory failure",
+        "disseminated disease",
+        "CNS involvement"
+      ],
+      "riskFactors": [
+        "CD4 < 50",
+        "neutropenia",
+        "transplant recipients",
+        "prolonged antibiotics",
+        "environmental exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 0.6,
+        "5-15": 0.5,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in immunocompromised"],
+      "notes": "Antifungal treatment needed; prognosis poor in advanced AIDS; ART critical"
+    },
+    {
+      "id": "hepatitis_d",
+      "condition": "Hepatitis D (Delta Hepatitis)",
+      "category": "bloodborne_sti",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "jaundice",
+        "dark urine",
+        "pale stools",
+        "abdominal pain",
+        "fatigue",
+        "nausea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "fulminant hepatitis",
+        "cirrhosis",
+        "hepatic encephalopathy",
+        "hepatocellular carcinoma"
+      ],
+      "riskFactors": [
+        "hepatitis B infection",
+        "needle sharing",
+        "unprotected intercourse",
+        "blood transfusion",
+        "occupational exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 0.3,
+        "5-15": 0.5,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "Requires HBsAg+ status; HBV vaccination prevents; no specific treatment"
+    },
+    {
+      "id": "htlv_1_2",
+      "condition": "HTLV-1/2 Infection",
+      "category": "bloodborne_sti",
+      "subRegionRelevance": ["Central Africa", "Southern Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "often asymptomatic",
+        "adult T-cell leukemia symptoms",
+        "neurological symptoms",
+        "myelopathy",
+        "urinary incontinence",
+        "spasticity"
+      ],
+      "redFlagSymptoms": [
+        "adult T-cell leukemia/lymphoma",
+        "tropical spastic paraparesis",
+        "complications"
+      ],
+      "riskFactors": [
+        "blood transfusion",
+        "needle sharing",
+        "vertical transmission",
+        "breastfeeding"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 0.5,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round transmission"],
+      "notes": "No cure; lifelong infection; blood safety and counseling important"
+    },
+    {
+      "id": "tetanus",
+      "condition": "Tetanus",
+      "category": "vaccine_preventable",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "jaw stiffness",
+        "difficulty swallowing",
+        "muscle rigidity",
+        "risus sardonicus",
+        "opisthotonus",
+        "muscle spasms",
+        "respiratory difficulty"
+      ],
+      "redFlagSymptoms": [
+        "severe muscle spasms",
+        "respiratory failure",
+        "autonomic dysfunction",
+        "death"
+      ],
+      "riskFactors": [
+        "wound contamination",
+        "agricultural injury",
+        "no vaccination",
+        "poor wound care",
+        "childbirth complications"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 0.9,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["agricultural injury season"],
+      "notes": "Vaccine-preventable; case fatality high; supportive care (ventilation) crucial"
+    },
+    {
+      "id": "mumps",
+      "condition": "Mumps",
+      "category": "vaccine_preventable",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "parotitis",
+        "salivary gland swelling",
+        "difficulty chewing",
+        "malaise",
+        "myalgia",
+        "headache",
+        "meningitis symptoms"
+      ],
+      "redFlagSymptoms": [
+        "meningitis",
+        "encephalitis",
+        "deafness",
+        "pancreatitis",
+        "orchitis complications"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "contact with infected",
+        "crowding",
+        "young age"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.2,
+        "15-50": 0.9,
+        "50+": 0.6
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["winter peaks"],
+      "notes": "Vaccine-preventable; no specific treatment; supportive care important"
+    },
+    {
+      "id": "rubella",
+      "condition": "Rubella (German Measles)",
+      "category": "vaccine_preventable",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "low-grade fever",
+        "rash starting face",
+        "lymphadenopathy",
+        "joint pain",
+        "conjunctivitis"
+      ],
+      "redFlagSymptoms": [
+        "congenital rubella syndrome",
+        "encephalitis",
+        "thrombocytopenia",
+        "severe complications"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "pregnancy exposure first trimester",
+        "contact with infected"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 0.5
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["spring peaks"],
+      "notes": "Vaccine highly effective; pregnancy screening important; congenital disease preventable"
+    },
+    {
+      "id": "varicella_chickenpox",
+      "condition": "Varicella (Chickenpox)",
+      "category": "vaccine_preventable",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "fever",
+        "vesicular rash",
+        "pruritus",
+        "crops of lesions",
+        "malaise",
+        "headache",
+        "anorexia"
+      ],
+      "redFlagSymptoms": [
+        "severe secondary infection",
+        "pneumonia",
+        "encephalitis",
+        "disseminated disease in immunocompromised"
+      ],
+      "riskFactors": [
+        "no vaccination",
+        "immunosuppression",
+        "contact with infected",
+        "crowding"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.3,
+        "15-50": 0.8,
+        "50+": 0.7
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["winter peaks"],
+      "notes": "Vaccine available; prevents severe disease; supportive care primary treatment"
+    },
+    {
+      "id": "gestational_diabetes",
+      "condition": "Gestational Diabetes Mellitus",
+      "category": "maternal_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "often asymptomatic",
+        "thirst",
+        "frequent urination",
+        "fatigue",
+        "recurrent infections"
+      ],
+      "redFlagSymptoms": [
+        "large for gestational age",
+        "polyhydramnios",
+        "preeclampsia",
+        "cesarean delivery need",
+        "neonatal hypoglycemia"
+      ],
+      "riskFactors": [
+        "obesity",
+        "age > 35",
+        "family history diabetes",
+        "previous GDM",
+        "polycystic ovary syndrome"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Screening during pregnancy critical; lifestyle management primary; insulin if needed"
+    },
+    {
+      "id": "pre_eclampsia_hypertensive",
+      "condition": "Hypertensive Disorders of Pregnancy",
+      "category": "maternal_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "elevated blood pressure",
+        "proteinuria",
+        "edema",
+        "headache",
+        "visual disturbances",
+        "epigastric pain"
+      ],
+      "redFlagSymptoms": [
+        "eclampsia with seizures",
+        "HELLP syndrome",
+        "stroke",
+        "placental abruption",
+        "fetal distress"
+      ],
+      "riskFactors": [
+        "primigravida",
+        "age extremes",
+        "multiple pregnancy",
+        "chronic hypertension",
+        "diabetes",
+        "kidney disease"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Antenatal care vital for monitoring; antihypertensive therapy; delivery ultimate treatment"
+    },
+    {
+      "id": "sepsis_pregnancy",
+      "condition": "Pregnancy & Puerperal Sepsis",
+      "category": "maternal_condition",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "malaise",
+        "abdominal pain",
+        "vaginal discharge",
+        "rapid heart rate",
+        "confusion",
+        "shock signs"
+      ],
+      "redFlagSymptoms": [
+        "shock",
+        "multi-organ failure",
+        "disseminated intravascular coagulation",
+        "death"
+      ],
+      "riskFactors": [
+        "unskilled delivery",
+        "prolonged rupture membranes",
+        "prolonged labor",
+        "manual removal placenta",
+        "retained placenta",
+        "unsafe abortion"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.01,
+        "15-50": 1.0,
+        "50+": 0.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 0.0,
+        "other": 0.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk"],
+      "notes": "Medical emergency; antibiotics immediately critical; skilled birth attendance prevention"
+    },
+    {
+      "id": "epilepsy",
+      "condition": "Epilepsy",
+      "category": "neurological_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "recurrent seizures",
+        "loss of consciousness",
+        "convulsions",
+        "post-ictal confusion",
+        "tongue biting",
+        "incontinence"
+      ],
+      "redFlagSymptoms": [
+        "status epilepticus",
+        "severe head injury from falls",
+        "sudden unexpected nocturnal death",
+        "aspiration"
+      ],
+      "riskFactors": [
+        "head injury",
+        "birth trauma",
+        "meningitis/encephalitis",
+        "stroke",
+        "tumor",
+        "family history",
+        "fever (children)"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.1,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Antiepileptic drugs effective; medication access critical; seizure first aid important"
+    },
+    {
+      "id": "cerebral_palsy",
+      "condition": "Cerebral Palsy",
+      "category": "neurological_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abnormal muscle tone",
+        "spasticity",
+        "poor coordination",
+        "developmental delay",
+        "contractures",
+        "communication difficulties",
+        "feeding problems"
+      ],
+      "redFlagSymptoms": [
+        "severe disability",
+        "aspiration risk",
+        "contractures limiting mobility",
+        "scoliosis"
+      ],
+      "riskFactors": [
+        "prematurity",
+        "low birth weight",
+        "birth asphyxia",
+        "neonatal sepsis",
+        "intrauterine infection",
+        "jaundice/kernicterus"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Preventable through perinatal care; rehabilitation important; no cure but management improves function"
+    },
+    {
+      "id": "spina_bifida",
+      "condition": "Spina Bifida",
+      "category": "neurological_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "visible spine gap",
+        "lower limb paralysis",
+        "bowel/bladder incontinence",
+        "hydrocephalus",
+        "developmental delay",
+        "mobility limitation"
+      ],
+      "redFlagSymptoms": [
+        "severe hydrocephalus",
+        "severe paralysis",
+        "complete disability",
+        "Chiari malformation"
+      ],
+      "riskFactors": [
+        "maternal folate deficiency",
+        "maternal diabetes",
+        "drug exposure (anticonvulsants)",
+        "family history",
+        "malnutrition in pregnancy"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round occurrence"],
+      "notes": "Prenatal folic acid supplementation prevents; surgical repair improves outcomes"
+    },
+    {
+      "id": "lipid_disorder",
+      "condition": "Lipid Disorders (Dyslipidemia)",
+      "category": "metabolic_disorder",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "often asymptomatic",
+        "tendon xanthomas",
+        "skin xanthomas",
+        "corneal arcus",
+        "premature atherosclerosis signs"
+      ],
+      "redFlagSymptoms": [
+        "acute coronary syndrome",
+        "stroke",
+        "peripheral arterial disease",
+        "sudden cardiac death"
+      ],
+      "riskFactors": [
+        "high saturated fat diet",
+        "sedentary lifestyle",
+        "obesity",
+        "smoking",
+        "alcohol use",
+        "family history",
+        "diabetes"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.3,
+        "15-50": 1.0,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Screening in high-risk groups; lifestyle modification first-line; statins if indicated"
+    },
+    {
+      "id": "pulmonary_fibrosis",
+      "condition": "Pulmonary Fibrosis",
+      "category": "chronic_respiratory",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "occupational",
+      "commonSymptoms": [
+        "progressive dyspnea",
+        "dry cough",
+        "fatigue",
+        "chest discomfort",
+        "clubbing",
+        "cyanosis",
+        "exercise limitation"
+      ],
+      "redFlagSymptoms": [
+        "severe respiratory failure",
+        "cor pulmonale",
+        "heart failure",
+        "death"
+      ],
+      "riskFactors": [
+        "occupational dust exposure",
+        "TB history",
+        "HIV infection",
+        "silicosis",
+        "asbestos exposure",
+        "recurrent infections"
+      ],
+      "ageWeighting": {
+        "0-5": 0.1,
+        "5-15": 0.2,
+        "15-50": 1.0,
+        "50+": 1.4
+      },
+      "genderWeighting": {
+        "female": 0.95,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["progressive year-round"],
+      "notes": "Occupational exposure prevention key; limited treatment options; supportive care"
+    },
+    {
+      "id": "bronchiectasis",
+      "condition": "Bronchiectasis",
+      "category": "chronic_respiratory",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "chronic productive cough",
+        "copious sputum production",
+        "recurrent pneumonia",
+        "hemoptysis",
+        "dyspnea",
+        "fatigue",
+        "weight loss"
+      ],
+      "redFlagSymptoms": [
+        "severe hemoptysis",
+        "respiratory failure",
+        "cor pulmonale",
+        "sepsis"
+      ],
+      "riskFactors": [
+        "TB history",
+        "recurrent respiratory infections",
+        "immunosuppression",
+        "cystic fibrosis",
+        "congenital abnormalities"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["exacerbations in cold season"],
+      "notes": "Management includes airway clearing, antibiotics; prevent progression; avoid triggers"
+    },
+    {
+      "id": "gastric_cancer",
+      "condition": "Gastric Cancer",
+      "category": "cancer",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "epigastric pain",
+        "early satiety",
+        "weight loss",
+        "anemia symptoms",
+        "vomiting",
+        "melena",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "large tumor burden",
+        "distant metastases",
+        "peritoneal involvement",
+        "advanced stage"
+      ],
+      "riskFactors": [
+        "H. pylori infection",
+        "smoking",
+        "alcohol use",
+        "processed meat diet",
+        "family history",
+        "atrophic gastritis",
+        "pernicious anemia"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 0.5,
+        "50+": 1.4
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "H. pylori screening/treatment prevents; late diagnosis common; palliative care important"
+    },
+    {
+      "id": "colorectal_cancer",
+      "condition": "Colorectal Cancer",
+      "category": "cancer",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "rectal bleeding",
+        "change in bowel habits",
+        "abdominal pain",
+        "anemia symptoms",
+        "weight loss",
+        "constipation",
+        "diarrhea"
+      ],
+      "redFlagSymptoms": [
+        "large tumor",
+        "distant metastases",
+        "bowel obstruction",
+        "perforation"
+      ],
+      "riskFactors": [
+        "age > 50",
+        "family history",
+        "inflammatory bowel disease",
+        "polyps",
+        "smoking",
+        "obesity",
+        "alcohol",
+        "low fiber diet"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.0,
+        "15-50": 0.3,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "Screening programs limited in Africa; late presentation common; dietary prevention important"
+    },
+    {
+      "id": "liver_cancer",
+      "condition": "Hepatocellular Carcinoma",
+      "category": "cancer",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "hepatomegaly",
+        "jaundice",
+        "ascites",
+        "abdominal pain",
+        "weight loss",
+        "fatigue",
+        "portal hypertension signs"
+      ],
+      "redFlagSymptoms": [
+        "large tumor",
+        "vascular invasion",
+        "metastases",
+        "liver failure"
+      ],
+      "riskFactors": [
+        "hepatitis B",
+        "hepatitis C",
+        "cirrhosis",
+        "alcohol use",
+        "aflatoxin exposure",
+        "obesity",
+        "diabetes"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.01,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 0.8,
+        "male": 1.2,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round"],
+      "notes": "HBV vaccination and HCV treatment prevent; HBsAg screening important; prognosis generally poor"
+    },
+    {
+      "id": "depressive_disorders",
+      "condition": "Depression (Major Depressive Disorder)",
+      "category": "mental_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "persistent sad mood",
+        "loss of interest/pleasure",
+        "sleep disturbance",
+        "appetite change",
+        "fatigue",
+        "guilt/worthlessness",
+        "difficulty concentrating",
+        "suicidal ideation"
+      ],
+      "redFlagSymptoms": [
+        "suicidal ideation/attempt",
+        "severe functional impairment",
+        "psychotic features",
+        "catatonia"
+      ],
+      "riskFactors": [
+        "stress/trauma",
+        "poverty",
+        "chronic disease",
+        "substance use",
+        "conflict/displacement",
+        "family history",
+        "female gender",
+        "previous episodes"
+      ],
+      "ageWeighting": {
+        "0-5": 0.3,
+        "5-15": 0.8,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.2,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["seasonal variation in some"],
+      "notes": "Underdiagnosed in Africa; psychotherapy and antidepressants effective; peer support important"
+    },
+    {
+      "id": "anxiety_disorders",
+      "condition": "Anxiety Disorders",
+      "category": "mental_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "excessive worry",
+        "restlessness",
+        "irritability",
+        "muscle tension",
+        "sleep disturbance",
+        "panic attacks",
+        "avoidance"
+      ],
+      "redFlagSymptoms": [
+        "severe functional impairment",
+        "comorbid depression",
+        "substance misuse",
+        "suicidal ideation"
+      ],
+      "riskFactors": [
+        "trauma/stress",
+        "chronic disease",
+        "poverty",
+        "substance use",
+        "family history",
+        "female gender"
+      ],
+      "ageWeighting": {
+        "0-5": 0.3,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.2,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["conflict situations increase"],
+      "notes": "Often comorbid with depression; psychotherapy primary; medication if needed"
+    },
+    {
+      "id": "schizophrenia_psychosis",
+      "condition": "Schizophrenia & Severe Mental Illness",
+      "category": "mental_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "delusions",
+        "hallucinations",
+        "disorganized speech",
+        "negative symptoms",
+        "poor social functioning",
+        "cognitive difficulties",
+        "behavioral changes"
+      ],
+      "redFlagSymptoms": [
+        "acute psychotic episode",
+        "violent behavior",
+        "complete functional breakdown",
+        "catatonia"
+      ],
+      "riskFactors": [
+        "family history",
+        "stress/trauma",
+        "substance use",
+        "poverty",
+        "urban living",
+        "conflict exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.1,
+        "15-50": 1.0,
+        "50+": 0.7
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["first episode stress-related"],
+      "notes": "Antipsychotic medications effective; psychosocial support critical; medication adherence challenges"
+    },
+    {
+      "id": "substance_use_disorder",
+      "condition": "Substance Use Disorders",
+      "category": "mental_health",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "tolerance",
+        "withdrawal symptoms",
+        "loss of control",
+        "continued use despite harm",
+        "social/occupational impairment",
+        "risky behavior"
+      ],
+      "redFlagSymptoms": [
+        "overdose",
+        "withdrawal seizures",
+        "severe intoxication",
+        "infectious complications",
+        "complete social breakdown"
+      ],
+      "riskFactors": [
+        "poverty",
+        "trauma/stress",
+        "mental illness",
+        "peer influence",
+        "easy access",
+        "family history",
+        "unemployment"
+      ],
+      "ageWeighting": {
+        "0-5": 0.0,
+        "5-15": 0.2,
+        "15-50": 1.0,
+        "50+": 0.6
+      },
+      "genderWeighting": {
+        "female": 0.8,
+        "male": 1.3,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round concern"],
+      "notes": "Treatment access limited; harm reduction and rehabilitation important; peer support effective"
+    },
+    {
+      "id": "burns_injuries",
+      "condition": "Burns & Burn Injuries",
+      "category": "injury_trauma",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "burn wounds",
+        "pain",
+        "redness",
+        "blistering",
+        "charring",
+        "respiratory distress if inhalation",
+        "shock signs"
+      ],
+      "redFlagSymptoms": [
+        "severe burns > 20% BSA",
+        "inhalation injury",
+        "deep burns",
+        "shock",
+        "organ failure",
+        "death"
+      ],
+      "riskFactors": [
+        "open fire use",
+        "lack of house safety",
+        "children near fires",
+        "alcohol use",
+        "occupational exposure",
+        "smoke inhalation"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["dry season increases risk"],
+      "notes": "First aid essential; burn center transfer critical; infection prevention important; scarring prevention"
+    },
+    {
+      "id": "poisoning_toxic_exposure",
+      "condition": "Poisoning & Toxic Exposure",
+      "category": "injury_trauma",
+      "subRegionRelevance": ["All regions"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "symptoms vary by toxin",
+        "nausea/vomiting",
+        "seizures",
+        "respiratory difficulty",
+        "altered mental status",
+        "metabolic disturbance"
+      ],
+      "redFlagSymptoms": [
+        "respiratory failure",
+        "seizures",
+        "shock",
+        "organ failure",
+        "death"
+      ],
+      "riskFactors": [
+        "pesticide exposure",
+        "medication overdose",
+        "chemical exposure",
+        "heavy metal exposure",
+        "intentional ingestion",
+        "occupational exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.2,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["agricultural season pesticide peaks"],
+      "notes": "Poison control access limited; supportive care primary; antidotes where available; prevention key"
+    },
+    {
+      "id": "ebola_virus_disease",
+      "condition": "Ebola Virus Disease",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["Central Africa", "West Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "severe weakness",
+        "muscle pain",
+        "headache",
+        "hemorrhaging",
+        "rash",
+        "impaired kidney function",
+        "vomiting",
+        "diarrhea"
+      ],
+      "redFlagSymptoms": [
+        "massive hemorrhage",
+        "shock",
+        "organ failure",
+        "death (up to 90%)"
+      ],
+      "riskFactors": [
+        "contact with infected animal",
+        "contact with infected person",
+        "exposure to body fluids",
+        "nosocomial spread"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round epidemic risk"],
+      "notes": "High fatality; supportive care critical; infection control paramount; outbreak response immediate"
+    },
+    {
+      "id": "marburg_virus",
+      "condition": "Marburg Virus Disease",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["Central Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "severe weakness",
+        "muscle pain",
+        "headache",
+        "rash",
+        "hemorrhaging",
+        "bruising",
+        "diarrhea",
+        "vomiting"
+      ],
+      "redFlagSymptoms": [
+        "severe hemorrhage",
+        "shock",
+        "multi-organ failure",
+        "death"
+      ],
+      "riskFactors": [
+        "exposure to infected fruit bats",
+        "contact with infected person",
+        "healthcare exposure",
+        "body fluid contact"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round risk in endemic"],
+      "notes": "Similar to Ebola; high fatality; supportive care only; infection control critical"
+    },
+    {
+      "id": "mpox_monkeypox",
+      "condition": "Mpox (Monkeypox)",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["Central Africa", "West Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "muscle pain",
+        "characteristic rash",
+        "pustules",
+        "lymphadenopathy",
+        "malaise"
+      ],
+      "redFlagSymptoms": [
+        "severe skin involvement",
+        "ocular involvement",
+        "encephalitis",
+        "secondary infection",
+        "complications in children"
+      ],
+      "riskFactors": [
+        "contact with infected animal",
+        "contact with infected person",
+        "healthcare exposure",
+        "immunosuppression"
+      ],
+      "ageWeighting": {
+        "0-5": 1.1,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round circulation"],
+      "notes": "Lower mortality than Ebola; supportive care; infection control; vaccine available"
+    },
+    {
+      "id": "zika_virus",
+      "condition": "Zika Virus Infection",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["West Africa", "Central Africa"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "fever",
+        "rash",
+        "joint pain",
+        "muscle pain",
+        "headache",
+        "eye pain",
+        "malaise",
+        "fatigue"
+      ],
+      "redFlagSymptoms": [
+        "pregnancy with microcephaly risk",
+        "neurological complications",
+        "Guillain-Barré syndrome",
+        "congenital abnormalities"
+      ],
+      "riskFactors": [
+        "mosquito exposure",
+        "pregnancy",
+        "travel to endemic",
+        "sexual transmission"
+      ],
+      "ageWeighting": {
+        "0-5": 0.9,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.1,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm months peak"],
+      "notes": "Pregnancy prevention key; supportive care; mosquito control; surveillance important"
+    },
+    {
+      "id": "rift_valley_fever",
+      "condition": "Rift Valley Fever (RVF)",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["East Africa", "Southern Africa", "West Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "muscle pain",
+        "nausea",
+        "vomiting",
+        "rash",
+        "hemorrhage",
+        "eye involvement"
+      ],
+      "redFlagSymptoms": [
+        "hemorrhagic fever",
+        "neurological involvement",
+        "vision loss",
+        "encephalitis",
+        "death"
+      ],
+      "riskFactors": [
+        "livestock contact",
+        "mosquito exposure",
+        "contact with infected blood",
+        "occupational exposure",
+        "flooding/water"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season/flooding peak"],
+      "notes": "Animal vaccination prevents; occupational precautions; supportive care; surveillance critical"
+    },
+    {
+      "id": "east_african_sleeping_sickness_alt",
+      "condition": "East African Sleeping Sickness (Gambian form complications)",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["East Africa", "Central Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "headache",
+        "joint pain",
+        "rash",
+        "lymphadenopathy",
+        "sleep disturbance",
+        "neurological changes"
+      ],
+      "redFlagSymptoms": [
+        "progressive coma",
+        "severe neurological disease",
+        "untreated death"
+      ],
+      "riskFactors": [
+        "tsetse fly exposure",
+        "rural travel",
+        "occupational exposure",
+        "no preventive measures"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 0.9,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm season peak"],
+      "notes": "Re-emergence concern; early detection critical; vector control important"
+    },
+    {
+      "id": "leishmaniasis_visceral_complications",
+      "condition": "Visceral Leishmaniasis - Post-Kala-azar Dermal Complications",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["East Africa", "Central Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "skin nodules",
+        "depigmentation",
+        "macules",
+        "papules",
+        "polymorphic rash",
+        "pruritus"
+      ],
+      "redFlagSymptoms": [
+        "widespread skin involvement",
+        "secondary infection",
+        "severe disfigurement"
+      ],
+      "riskFactors": [
+        "previous kala-azar",
+        "inadequate treatment",
+        "immune reconstitution",
+        "sand fly contact"
+      ],
+      "ageWeighting": {
+        "0-5": 0.7,
+        "5-15": 0.9,
+        "15-50": 1.0,
+        "50+": 0.8
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["year-round in endemic"],
+      "notes": "Treatment challenge; severe disease prevention critical; vector control important"
+    },
+    {
+      "id": "lyme_disease_african",
+      "condition": "Tick-Borne Relapsing Fever",
+      "category": "emerging_reemerging",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "fever",
+        "chills",
+        "headache",
+        "muscle pain",
+        "joint pain",
+        "rash",
+        "relapsing episodes"
+      ],
+      "redFlagSymptoms": [
+        "severe multi-organ involvement",
+        "neurological complications",
+        "shock",
+        "death if untreated"
+      ],
+      "riskFactors": [
+        "tick exposure",
+        "poor housing",
+        "overcrowding",
+        "safari exposure"
+      ],
+      "ageWeighting": {
+        "0-5": 1.0,
+        "5-15": 1.0,
+        "15-50": 1.0,
+        "50+": 1.1
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["warm season peak"],
+      "notes": "Antibiotic responsive; preventive tick control important"
+    },
+    {
+      "id": "stomach_ache_indigestion",
+      "condition": "Indigestion (Dyspepsia)",
+      "category": "digestive",
+      "subRegionRelevance": ["All Africa"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "upper abdominal discomfort",
+        "bloating",
+        "fullness",
+        "nausea",
+        "burping"
+      ],
+      "redFlagSymptoms": [
+        "persistent vomiting",
+        "weight loss",
+        "difficulty swallowing"
+      ],
+      "riskFactors": [
+        "overeating",
+        "spicy food",
+        "fatty food",
+        "alcohol",
+        "stress"
+      ],
+      "ageWeighting": {
+        "0-5": 0.6,
+        "5-15": 0.8,
+        "15-50": 1.2,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [],
+      "notes": "Very common and usually mild; lifestyle-related"
+    },
+    {
+      "id": "stomach_ache_gastroenteritis",
+      "condition": "Gastroenteritis (Stomach Infection)",
+      "category": "infectious",
+      "subRegionRelevance": ["Sub-Saharan Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abdominal pain",
+        "diarrhea",
+        "vomiting",
+        "fever",
+        "dehydration"
+      ],
+      "redFlagSymptoms": [
+        "severe dehydration",
+        "bloody diarrhea",
+        "persistent vomiting"
+      ],
+      "riskFactors": ["contaminated food", "unsafe water", "poor sanitation"],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 1.2,
+        "15-50": 1.0,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Highly common in Africa; hydration is critical"
+    },
+    {
+      "id": "stomach_ache_malaria_related",
+      "condition": "Malaria (Abdominal Presentation)",
+      "category": "infectious",
+      "subRegionRelevance": ["West Africa", "Central Africa", "East Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abdominal pain",
+        "fever",
+        "chills",
+        "vomiting",
+        "fatigue"
+      ],
+      "redFlagSymptoms": ["confusion", "severe anemia", "seizures"],
+      "riskFactors": ["mosquito exposure", "no bed net", "rainy season"],
+      "ageWeighting": {
+        "0-5": 1.5,
+        "5-15": 1.3,
+        "15-50": 1.0,
+        "50+": 1.2
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season peak"],
+      "notes": "Very high priority in Sub-Saharan Africa; often misdiagnosed"
+    },
+    {
+      "id": "stomach_ache_typhoid",
+      "condition": "Typhoid Fever",
+      "category": "infectious",
+      "subRegionRelevance": ["Sub-Saharan Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abdominal pain",
+        "fever",
+        "weakness",
+        "constipation or diarrhea"
+      ],
+      "redFlagSymptoms": ["intestinal bleeding", "severe weakness", "delirium"],
+      "riskFactors": [
+        "contaminated water",
+        "poor hygiene",
+        "crowded living conditions"
+      ],
+      "ageWeighting": {
+        "0-5": 0.8,
+        "5-15": 1.2,
+        "15-50": 1.1,
+        "50+": 1.0
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season"],
+      "notes": "Common in low sanitation areas"
+    },
+    {
+      "id": "stomach_ache_gastritis_ulcer",
+      "condition": "Gastritis / Peptic Ulcer Disease",
+      "category": "digestive",
+      "subRegionRelevance": ["All Africa"],
+      "urbanOrRuralBias": "urban",
+      "commonSymptoms": [
+        "burning stomach pain",
+        "pain when hungry",
+        "nausea",
+        "bloating"
+      ],
+      "redFlagSymptoms": ["vomiting blood", "black stool", "severe pain"],
+      "riskFactors": ["NSAID use", "alcohol", "stress", "H. pylori infection"],
+      "ageWeighting": {
+        "0-5": 0.3,
+        "5-15": 0.6,
+        "15-50": 1.2,
+        "50+": 1.3
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [],
+      "notes": "Chronic condition; may mimic simple indigestion"
+    },
+    {
+      "id": "stomach_ache_appendicitis",
+      "condition": "Appendicitis",
+      "category": "emergency",
+      "subRegionRelevance": ["All Africa"],
+      "urbanOrRuralBias": "both",
+      "commonSymptoms": [
+        "abdominal pain starting near navel",
+        "pain shifting to lower right abdomen",
+        "fever",
+        "nausea",
+        "loss of appetite"
+      ],
+      "redFlagSymptoms": [
+        "severe localized pain",
+        "rebound tenderness",
+        "rupture risk"
+      ],
+      "riskFactors": ["unknown exact cause", "possible infection"],
+      "ageWeighting": {
+        "0-5": 0.7,
+        "5-15": 1.2,
+        "15-50": 1.3,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.1,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": [],
+      "notes": "Medical emergency; requires surgery"
+    },
+    {
+      "id": "stomach_ache_worm_infection",
+      "condition": "Intestinal Worm Infection",
+      "category": "parasitic",
+      "subRegionRelevance": ["Sub-Saharan Africa"],
+      "urbanOrRuralBias": "rural",
+      "commonSymptoms": [
+        "abdominal pain",
+        "bloating",
+        "diarrhea",
+        "weight loss"
+      ],
+      "redFlagSymptoms": ["severe malnutrition", "intestinal blockage"],
+      "riskFactors": [
+        "poor sanitation",
+        "barefoot exposure",
+        "contaminated soil"
+      ],
+      "ageWeighting": {
+        "0-5": 1.3,
+        "5-15": 1.5,
+        "15-50": 1.0,
+        "50+": 0.9
+      },
+      "genderWeighting": {
+        "female": 1.0,
+        "male": 1.0,
+        "other": 1.0
+      },
+      "climateOrSeasonalFactors": ["rainy season"],
+      "notes": "Common in children; preventable with hygiene"
+    }
+  ]
+}

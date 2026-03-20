@@ -1,0 +1,1863 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medeeka User Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Kodchasan", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #020617;
+        color: #e5e7eb;
+      }
+      .dashboard {
+        display: flex;
+        min-height: 100vh;
+      }
+      /* Sidebar styles */
+      .sidebar {
+        width: 240px;
+        background: #020617;
+        border-right: 1px solid #1e293b;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        width: 90px;
+      }
+      .hamburger {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #94a3b8;
+        padding: 8px;
+        border-radius: 6px;
+      }
+      .hamburger:hover {
+        background: rgba(15, 23, 42, 0.5);
+      }
+      .nav {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .nav a {
+        display: block;
+        padding: 12px 14px;
+        margin-bottom: 6px;
+        border-radius: 10px;
+        color: #94a3b8;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .nav a:hover,
+      .nav a.active {
+        background: #0f172a;
+        color: #38bdf8;
+      }
+      .dropdown-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 12px 14px;
+        margin-bottom: 6px;
+        border-radius: 10px;
+        color: #94a3b8;
+        text-decoration: none;
+        transition: 0.3s;
+        background: none;
+        border: none;
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+      }
+      .dropdown-btn:hover {
+        background: #0f172a;
+        color: #38bdf8;
+      }
+      .dropdown-container {
+        display: none;
+        flex-direction: column;
+        margin-left: 10px;
+        animation: fadeIn 0.2s ease;
+      }
+      .dropdown-container.open {
+        display: flex;
+      }
+      .dropdown-container a {
+        padding: 10px 14px;
+        margin-bottom: 4px;
+        border-radius: 8px;
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+      .dropdown-container a:hover,
+      .dropdown-container a.active {
+        background: #0f172a;
+        color: #38bdf8;
+      }
+      /* Main content */
+      .main {
+        flex: 1;
+        padding: 24px;
+        min-width: 0; /* Prevents overflow */
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .topbar h2 {
+        font-size: 1.5rem;
+      }
+      /* User Profile Dropdown Styles */
+      .profile-container {
+        position: relative;
+        display: inline-block;
+      }
+      .profile-trigger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 8px 12px;
+        background: rgba(15, 23, 42, 0.5);
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+        transition: all 0.3s ease;
+      }
+      .profile-trigger:hover {
+        background: rgba(15, 23, 42, 0.8);
+      }
+      .profile-icon {
+        font-size: 1.2rem;
+        margin-right: 8px;
+      }
+      .profile-arrow {
+        margin-left: 8px;
+        font-size: 0.8rem;
+        transition: transform 0.3s ease;
+      }
+      .profile-arrow.open {
+        transform: rotate(180deg);
+      }
+      .profile-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 280px;
+        background: #020617;
+        border: 1px solid #1e293b;
+        border-radius: 12px;
+        padding: 16px;
+        margin-top: 8px;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.2s ease;
+      }
+      .profile-dropdown.open {
+        display: block;
+      }
+      .profile-header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #1e293b;
+        margin-bottom: 16px;
+      }
+      .profile-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #38bdf8, #2563eb);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+      }
+      .profile-avatar i {
+        font-size: 1.5rem;
+        color: white;
+      }
+      .profile-info h4 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+        color: #e5e7eb;
+      }
+      .profile-info p {
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+      .profile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .profile-menu-item {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+        color: #94a3b8;
+        text-decoration: none;
+      }
+      .profile-menu-item:hover {
+        background: rgba(15, 23, 42, 0.7);
+        color: #38bdf8;
+      }
+      .profile-menu-item i {
+        width: 24px;
+        margin-right: 12px;
+        font-size: 1rem;
+      }
+      .profile-menu-item span {
+        flex: 1;
+      }
+      .profile-divider {
+        height: 1px;
+        background: #1e293b;
+        margin: 12px 0;
+      }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+      .card {
+        background: #020617;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        padding: 18px;
+        word-break: break-word;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      .card h3 {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+      .btn {
+        padding: 10px 16px;
+        border-radius: 10px;
+        border: none;
+        background: linear-gradient(135deg, #38bdf8, #2563eb);
+        color: #020617;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+      }
+      .btn:hover {
+        opacity: 0.9;
+      }
+      .btn-outline {
+        background: transparent;
+        border: 1px solid #38bdf8;
+        color: #38bdf8;
+      }
+      .btn-outline:hover {
+        background: rgba(56, 189, 248, 0.1);
+      }
+      .ai-box textarea {
+        width: 100%;
+        height: 120px;
+        border-radius: 12px;
+        background: #020617;
+        border: 1px solid #1e293b;
+        color: #e5e7eb;
+        padding: 12px;
+        resize: vertical;
+      }
+      .upload-box {
+        border: 2px dashed #1e293b;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        margin-top: 14px;
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+        transition: border-color 0.2s ease;
+      }
+      .upload-box:hover {
+        border-color: #38bdf8;
+      }
+      #uploadedImages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      #uploadedImages img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+      }
+      .processing {
+        display: none;
+        text-align: center;
+        padding: 40px;
+      }
+      .report {
+        display: none;
+      }
+      .badge {
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        background: rgba(15, 23, 42, 0.7);
+      }
+      .badge.low {
+        color: #10b981;
+      }
+      .badge.medium {
+        color: #facc15;
+      }
+      .badge.high {
+        color: #ef4444;
+      }
+      /* Report image gallery */
+      .report-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 10px;
+      }
+      .report-image {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+        transition: transform 0.2s ease;
+      }
+      .report-image:hover {
+        transform: scale(1.05);
+      }
+      .no-images {
+        color: #94a3b8;
+        font-style: italic;
+        padding: 10px;
+        background: rgba(15, 23, 42, 0.3);
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      /* Mobile header */
+      .mobile-header {
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 16px;
+        background: #020617;
+        border-bottom: 1px solid #1e293b;
+        position: relative;
+        min-height: 70px;
+      }
+      .mobile-header-left {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+      .mobile-header .logo-mobile {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+      }
+      .mobile-header .logo-mobile img {
+        width: 70px;
+      }
+      /* Mobile Navigation - Separate from sidebar */
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #020617;
+        border-bottom: 1px solid #1e293b;
+        padding: 16px;
+        z-index: 99;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+        pointer-events: none;
+      }
+      .mobile-nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+      }
+      .mobile-nav .nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .mobile-nav a,
+      .mobile-nav .dropdown-btn {
+        padding: 14px 16px;
+        margin-bottom: 8px;
+        font-size: 1rem;
+      }
+      .mobile-nav .dropdown-container {
+        margin-left: 0;
+        margin-top: 4px;
+      }
+      .mobile-nav .dropdown-container a {
+        padding: 12px 16px;
+        margin-bottom: 0;
+        background: rgba(15, 23, 42, 0.5);
+      }
+      /* Mobile profile dropdown */
+      .mobile-profile-container {
+        position: relative;
+      }
+      .mobile-profile-trigger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 6px 12px;
+        background: rgba(15, 23, 42, 0.5);
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+      }
+      .mobile-profile-dropdown {
+        position: fixed;
+        top: 70px;
+        right: 16px;
+        width: 280px;
+        background: #020617;
+        border: 1px solid #1e293b;
+        border-radius: 12px;
+        padding: 16px;
+        display: none;
+        z-index: 1000;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.2s ease;
+      }
+      .mobile-profile-dropdown.open {
+        display: block;
+      }
+
+      /* Reports Page Container */
+      .reports-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+      }
+      /* My Records Page Styles */
+      .records-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+      }
+
+      .upload-section {
+        background: #020617;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      .upload-section h3 {
+        margin-bottom: 20px;
+        color: #e5e7eb;
+      }
+
+      .upload-area {
+        border: 2px dashed #1e293b;
+        border-radius: 12px;
+        padding: 40px 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .upload-area:hover {
+        border-color: #38bdf8;
+        background: rgba(56, 189, 248, 0.05);
+      }
+
+      .upload-area i {
+        font-size: 48px;
+        color: #38bdf8;
+        margin-bottom: 12px;
+      }
+
+      .upload-area p {
+        color: #94a3b8;
+        margin-bottom: 8px;
+      }
+
+      .upload-area .small {
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+
+      .file-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        background: rgba(15, 23, 42, 0.5);
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .file-icon {
+        font-size: 32px;
+        color: #38bdf8;
+      }
+
+      .file-details {
+        flex: 1;
+      }
+
+      .file-name {
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .file-meta {
+        font-size: 0.85rem;
+        color: #94a3b8;
+      }
+
+      .upload-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .form-row label {
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+
+      .form-row input,
+      .form-row select {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+        background: #0f172a;
+        color: #e5e7eb;
+        font-size: 0.95rem;
+      }
+
+      .form-row input:focus,
+      .form-row select:focus {
+        outline: none;
+        border-color: #38bdf8;
+      }
+
+      .file-type-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .type-badge {
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: #0f172a;
+        border: 1px solid #1e293b;
+        color: #94a3b8;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .type-badge:hover {
+        border-color: #38bdf8;
+        color: #38bdf8;
+      }
+
+      .type-badge.selected {
+        background: #38bdf8;
+        color: #020617;
+        border-color: #38bdf8;
+      }
+
+      .upload-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .records-list-section {
+        background: #020617;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        padding: 24px;
+      }
+
+      .records-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .records-header h3 {
+        color: #e5e7eb;
+      }
+
+      .records-header .stats {
+        color: #94a3b8;
+        font-size: 0.9rem;
+      }
+
+      .records-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+      }
+
+      .record-card {
+        background: #0f172a;
+        border: 1px solid #1e293b;
+        border-radius: 12px;
+        padding: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .record-card:hover {
+        transform: translateY(-2px);
+        border-color: #38bdf8;
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+      }
+
+      .record-icon {
+        font-size: 32px;
+        color: #38bdf8;
+        margin-bottom: 12px;
+      }
+
+      .record-title {
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .record-description {
+        font-size: 0.9rem;
+        color: #94a3b8;
+        margin-bottom: 12px;
+      }
+
+      .record-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+        color: #64748b;
+        padding-top: 12px;
+        border-top: 1px solid #1e293b;
+      }
+
+      .record-meta .date {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .blockchain-badge {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #10b981;
+        font-size: 0.8rem;
+      }
+
+      .blockchain-badge i {
+        font-size: 0.8rem;
+      }
+
+      .empty-records {
+        text-align: center;
+        padding: 40px;
+        color: #94a3b8;
+        background: #0f172a;
+        border-radius: 12px;
+      }
+
+      .empty-records i {
+        font-size: 48px;
+        color: #1e293b;
+        margin-bottom: 16px;
+      }
+      /* Responsive Styles */
+      @media (max-width: 1024px) {
+        .card-grid {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .report-image {
+          width: 100px;
+          height: 100px;
+        }
+        .profile-dropdown {
+          width: 260px;
+        }
+      }
+      @media (max-width: 768px) {
+        .dashboard {
+          flex-direction: column;
+        }
+        .mobile-header {
+          display: flex;
+        }
+        .mobile-nav {
+          display: block;
+        }
+        .sidebar {
+          display: none;
+        }
+        .hamburger {
+          display: block;
+        }
+        .logo {
+          display: none;
+        }
+        .main {
+          padding: 16px;
+          width: 100%;
+          margin-top: 0;
+        }
+        .topbar {
+          margin-top: 0;
+        }
+        .topbar h2 {
+          margin-bottom: 0;
+        }
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        #uploadedImages img {
+          width: 80px;
+          height: 80px;
+        }
+        .report-image {
+          width: 90px;
+          height: 90px;
+        }
+        .topbar {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0;
+        }
+        .topbar h2 {
+          font-size: 1.4rem;
+        }
+        /* Hide desktop profile on mobile */
+        .profile-container {
+          display: none;
+        }
+        .records-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        .mobile-header {
+          min-height: 65px;
+          padding: 10px 12px;
+        }
+        .mobile-nav {
+          top: 65px;
+        }
+        .hamburger {
+          padding: 6px;
+        }
+        .mobile-header .logo-mobile {
+          margin-left: 12px;
+        }
+        /* .mobile-header .logo-mobile img {
+          width: 10em;
+        } */
+        .mobile-profile-dropdown {
+          top: 65px;
+          right: 12px;
+          width: 260px;
+        }
+        .main {
+          padding: 12px;
+        }
+        .card {
+          padding: 14px;
+        }
+        .btn {
+          padding: 10px 14px;
+          width: 100%;
+        }
+        .topbar h2 {
+          font-size: 1.3rem;
+        }
+        .card h3 {
+          font-size: 1.1rem;
+        }
+        .report-image {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <div class="mobile-header-left">
+        <div class="hamburger" id="hamburgerBtn">☰</div>
+        <div class="logo-mobile">
+          <img src="../asset/medeeka-logo2.png" alt="logo" />
+        </div>
+      </div>
+      <!-- Mobile Profile Dropdown -->
+      <div class="mobile-profile-container">
+        <div class="mobile-profile-trigger" id="mobileProfileTrigger">
+          <i class="fas fa-user-circle profile-icon"></i>
+        </div>
+        <div class="mobile-profile-dropdown" id="mobileProfileDropdown">
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <div class="profile-info">
+              <h4 data-user-name>User Name</h4>
+              <p data-user-email>user@email.com</p>
+            </div>
+          </div>
+          <div class="profile-menu">
+            <a href="#" class="profile-menu-item">
+              <i class="fas fa-user-cog"></i>
+              <span>Account Settings</span>
+            </a>
+            <a href="#" class="profile-menu-item">
+              <i class="fas fa-question-circle"></i>
+              <span>Help Center</span>
+            </a>
+            <div class="profile-divider"></div>
+            <a href="#" class="profile-menu-item" data-logout-btn>
+              <i class="fas fa-sign-out-alt"></i>
+              <span>Sign Out</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation (Separate from sidebar) -->
+    <div class="mobile-nav" id="mobileNav">
+      <div class="nav">
+        <a href="#" onclick="show('home')">Dashboard</a>
+        <button class="dropdown-btn" id="mobileDropdownBtn">
+          <span>AI Diagnostics</span>
+          <span id="mobileDropdownArrow">▼</span>
+        </button>
+        <div class="dropdown-container" id="mobileDropdownContainer">
+          <a href="#" onclick="show('ai')">Run Diagnosis</a>
+          <a href="#" onclick="show('reports')">AI Health Reports</a>
+        </div>
+        <a href="#" onclick="show('records')">My Records</a>
+        <a href="#" onclick="show('home')">Appointments</a>
+        <a href="#" onclick="show('home')">Wallet</a>
+      </div>
+    </div>
+
+    <div class="dashboard">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../asset/medeeka-logo2.png" alt="logo" />
+        </div>
+        <div class="nav" id="mainNav">
+          <a href="#" onclick="show('home')">Dashboard</a>
+          <button class="dropdown-btn" id="dropdownBtn">
+            <span>AI Diagnostics</span>
+            <span id="dropdownArrow">▼</span>
+          </button>
+          <div class="dropdown-container" id="dropdownContainer">
+            <a href="#" onclick="show('ai')">Run Diagnosis</a>
+            <a href="#" onclick="show('reports')">AI Health Reports</a>
+          </div>
+          <a href="#" onclick="show('records')">My Records</a>
+          <a href="#" onclick="show('home')">Appointments</a>
+          <a href="#" onclick="show('home')">Wallet</a>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="topbar">
+          <h2>User Dashboard</h2>
+          <!-- Desktop Profile Dropdown -->
+          <div class="profile-container">
+            <div class="profile-trigger" id="profileTrigger">
+              <i class="fas fa-user-circle profile-icon"></i>
+              <span data-user-name>User</span>
+              <i
+                class="fas fa-chevron-down profile-arrow"
+                id="profileArrow"
+              ></i>
+            </div>
+            <div class="profile-dropdown" id="profileDropdown">
+              <div class="profile-header">
+                <div class="profile-avatar">
+                  <i class="fas fa-user-md"></i>
+                </div>
+                <div class="profile-info">
+                  <h4 data-user-name>User Name</h4>
+                  <p data-user-email>user@email.com</p>
+                </div>
+              </div>
+              <div class="profile-menu">
+                <a href="#" class="profile-menu-item">
+                  <i class="fas fa-user-cog"></i>
+                  <span>Account Settings</span>
+                </a>
+                <a href="#" class="profile-menu-item">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Help Center</span>
+                </a>
+                <div class="profile-divider"></div>
+                <a href="#" class="profile-menu-item" data-logout-btn>
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>Sign Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="home">
+          <div class="card-grid">
+            <div class="card">
+              <h3>Health Summary</h3>
+              <p>Last Check: Jan 28</p>
+              <p>Risk Level: <span class="badge medium">Medium</span></p>
+            </div>
+            <div class="card">
+              <h3>Quick Actions</h3>
+              <br /><button class="btn" onclick="show('ai')">
+                Start AI Diagnosis
+              </button>
+            </div>
+            <div class="card">
+              <h3>Recent Reports</h3>
+              <p id="recentCount">0 Reports</p>
+            </div>
+            <!-- New Card: Recent Medical Records - Starts at 0 -->
+            <div class="card">
+              <h3>Recent Medical Records</h3>
+              <p id="recentRecordsCount">0 Records</p>
+              <p style="margin-top: 10px; font-size: 0.9rem; color: #94a3b8">
+                <i
+                  class="fas fa-link"
+                  style="color: #10b981; margin-right: 4px"
+                ></i>
+                Stored on blockchain
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="ai" style="display: none">
+          <div class="card ai-box">
+            <h3>AI Health Assessment</h3>
+            <!-- <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 16px">
+              Your age and gender are automatically retrieved from your profile
+              for this assessment.
+            </p> -->
+            <br />
+            <div class="form-row">
+              <label for="symptoms">Symptoms (comma separated)</label>
+              <textarea
+                id="symptoms"
+                placeholder="e.g. headache, fever, nausea"
+              ></textarea>
+            </div>
+            <div class="form-row">
+              <label for="durationInput">Duration (days)</label>
+              <input
+                id="durationInput"
+                type="number"
+                min="0"
+                placeholder="e.g. 3"
+              />
+            </div>
+            <div class="form-row">
+              <label for="existingConditions"
+                >Existing conditions (optional, comma separated)</label
+              >
+              <input
+                id="existingConditions"
+                type="text"
+                placeholder="e.g. diabetes, hypertension"
+              />
+            </div>
+
+            <label class="upload-box" for="imageUpload">
+              <div style="font-size: 1.5rem">📷</div>
+              <div style="margin-top: 8px">
+                Upload Medical Images (optional)
+              </div>
+              <div style="font-size: 0.85rem; margin-top: 4px; color: #94a3b8">
+                Click to upload or drag and drop
+              </div>
+            </label>
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              multiple
+              style="display: none"
+              onchange="handleImageUpload(event)"
+            />
+            <div id="uploadedImages"></div>
+            <br />
+            <button class="btn" id="analyzeBtn">Analyze Now</button>
+
+            <div id="diagnosisResults" style="margin-top: 16px; display: none">
+              <h4>Top Possible Conditions</h4>
+              <ol id="resultsList"></ol>
+              <p>Risk Level: <span id="riskLevelBadge" class="badge"></span></p>
+              <h4>Reasoning</h4>
+              <ul id="reasoningList"></ul>
+              <h4>Recommendation</h4>
+              <p id="recommendationText"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="processing" class="processing">
+          <h3>🧠 Medeeka AI Processing...</h3>
+          <br />
+          <p>Analyzing symptoms...</p>
+          <div style="margin-top: 20px">
+            <div
+              style="
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 4px solid #1e293b;
+                border-top-color: #38bdf8;
+                animation: spin 1s linear infinite;
+              "
+            ></div>
+          </div>
+        </div>
+
+        <div id="reports" style="display: none">
+          <div class="reports-container">
+            <!-- <div class="card">
+              <h3>AI Health Reports</h3>
+              <br />
+              <div class="card-grid" id="reportsList">
+                <p style="color: #94a3b8; text-align: center; padding: 20px">
+                  No reports yet. Run your first AI diagnosis to see reports
+                  here.
+                </p>
+              </div>
+            </div> -->
+
+            <div class="card" style="margin-top: 20px">
+              <h3>AI Health Assessment History</h3>
+              <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 16px">
+                View all your past AI health assessments
+              </p>
+              <div id="historyList" style="margin-top: 12px"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="records" class="records-container" style="display: none">
+          <!-- Upload Section -->
+          <div class="upload-section">
+            <h3>
+              <i
+                class="fas fa-cloud-upload-alt"
+                style="margin-right: 10px; color: #38bdf8"
+              ></i>
+              Upload to Blockchain
+            </h3>
+
+            <div class="upload-area" id="uploadArea">
+              <i class="fas fa-file-medical"></i>
+              <p>Drag & drop or click to upload</p>
+              <p class="small">
+                Supports: Images, PDFs, DICOM (Medical formats)
+              </p>
+            </div>
+            <input
+              type="file"
+              id="recordFileInput"
+              accept="image/*,.pdf,.dcm"
+              style="display: none"
+            />
+
+            <!-- File Preview (hidden by default) -->
+            <div class="file-info" id="filePreview" style="display: none">
+              <div class="file-icon">
+                <i class="fas fa-file-image"></i>
+              </div>
+              <div class="file-details">
+                <div class="file-name" id="fileName">CT Scan.jpeg</div>
+                <div class="file-meta" id="fileMeta">2.4 MB • JPEG</div>
+              </div>
+              <button
+                class="btn-outline"
+                style="padding: 6px 12px"
+                onclick="clearSelectedFile()"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="upload-form">
+              <div class="form-row">
+                <label>File Type</label>
+                <div class="file-type-badges" id="fileTypeBadges">
+                  <span class="type-badge" data-type="xray">X-Ray</span>
+                  <span class="type-badge" data-type="ct">CT Scan</span>
+                  <span class="type-badge" data-type="mri">MRI</span>
+                  <span class="type-badge" data-type="lab">Lab Report</span>
+                  <span class="type-badge" data-type="prescription"
+                    >Prescription</span
+                  >
+                  <span class="type-badge" data-type="other">Other</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label>Description (Optional)</label>
+                <input
+                  type="text"
+                  id="fileDescription"
+                  placeholder="e.g., Chest X-ray from annual checkup"
+                />
+              </div>
+
+              <div class="upload-actions">
+                <button
+                  class="btn"
+                  onclick="uploadToBlockchain()"
+                  id="uploadBtn"
+                  disabled
+                >
+                  <i class="fas fa-link" style="margin-right: 8px"></i> Upload
+                  to Blockchain
+                </button>
+                <button
+                  class="btn-outline"
+                  onclick="cancelUpload()"
+                  id="cancelBtn"
+                  style="display: none"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Records List Section - Starts Empty -->
+          <div class="records-list-section">
+            <div class="records-header">
+              <h3>
+                <i
+                  class="fas fa-history"
+                  style="margin-right: 10px; color: #38bdf8"
+                ></i>
+                Your Medical Records
+              </h3>
+              <span class="stats" id="recordStats">0 records stored</span>
+            </div>
+
+            <div class="records-grid" id="recordsGrid">
+              <!-- Empty state by default -->
+            </div>
+          </div>
+        </div>
+
+        <div id="report" class="report"></div>
+      </div>
+    </div>
+
+    <script>
+      let reports = [];
+      let uploadedImagesData = [];
+
+      // Store image URLs for reports
+      let reportImageData = {};
+
+      // Blockchain records storage - initialize as empty array
+      let blockchainRecords = [];
+
+      // Selected file for upload
+      let selectedFile = null;
+      let selectedFileType = "";
+
+      // DOM elements
+      const dropdownBtn = document.getElementById("dropdownBtn");
+      const dropdownContainer = document.getElementById("dropdownContainer");
+      const dropdownArrow = document.getElementById("dropdownArrow");
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      const mobileDropdownBtn = document.getElementById("mobileDropdownBtn");
+      const mobileDropdownContainer = document.getElementById(
+        "mobileDropdownContainer",
+      );
+      const mobileDropdownArrow = document.getElementById(
+        "mobileDropdownArrow",
+      );
+      const profileTrigger = document.getElementById("profileTrigger");
+      const profileDropdown = document.getElementById("profileDropdown");
+      const profileArrow = document.getElementById("profileArrow");
+      const mobileProfileTrigger = document.getElementById(
+        "mobileProfileTrigger",
+      );
+      const mobileProfileDropdown = document.getElementById(
+        "mobileProfileDropdown",
+      );
+      const signOutBtn = document.getElementById("signOutBtn");
+      const desktopSignOutBtn = document.getElementById("desktopSignOutBtn");
+
+      // Records page elements
+      const uploadArea = document.getElementById("uploadArea");
+      const recordFileInput = document.getElementById("recordFileInput");
+      const filePreview = document.getElementById("filePreview");
+      const fileName = document.getElementById("fileName");
+      const fileMeta = document.getElementById("fileMeta");
+      const uploadBtn = document.getElementById("uploadBtn");
+      const cancelBtn = document.getElementById("cancelBtn");
+      const fileDescription = document.getElementById("fileDescription");
+      const recordsGrid = document.getElementById("recordsGrid");
+      const recordStats = document.getElementById("recordStats");
+      const recentRecordsCount = document.getElementById("recentRecordsCount");
+
+      // Initialize - Clear any existing sample data
+      localStorage.removeItem("blockchainRecords"); // Clear any existing data
+      blockchainRecords = []; // Start with empty array
+
+      // Toggle dropdown menu (works on both desktop and mobile)
+      dropdownBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        dropdownContainer.classList.toggle("open");
+        dropdownArrow.textContent = dropdownContainer.classList.contains("open")
+          ? "▲"
+          : "▼";
+      });
+
+      // Toggle mobile dropdown menu
+      mobileDropdownBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileDropdownContainer.classList.toggle("open");
+        mobileDropdownArrow.textContent =
+          mobileDropdownContainer.classList.contains("open") ? "▲" : "▼";
+      });
+
+      // Toggle mobile navigation - FIXED
+      hamburgerBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileNav.classList.toggle("open");
+      });
+
+      // Desktop Profile Dropdown
+      profileTrigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        profileDropdown.classList.toggle("open");
+        profileArrow.classList.toggle("open");
+      });
+
+      // Mobile Profile Dropdown
+      mobileProfileTrigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        mobileProfileDropdown.classList.toggle("open");
+      });
+
+      // Sign Out Functionality
+      function signOut() {
+        alert("You have been signed out. Redirecting to login page...");
+        // In a real app, you would redirect to login page
+        // window.location.href = '/login';
+      }
+
+      if (signOutBtn) {
+        signOutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          signOut();
+        });
+      }
+
+      if (desktopSignOutBtn) {
+        desktopSignOutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          signOut();
+        });
+      }
+
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        // Close AI diagnostics dropdown (desktop)
+        if (
+          !dropdownContainer.contains(e.target) &&
+          !dropdownBtn.contains(e.target)
+        ) {
+          dropdownContainer.classList.remove("open");
+          dropdownArrow.textContent = "▼";
+        }
+
+        // Close mobile AI diagnostics dropdown
+        if (
+          !mobileDropdownContainer.contains(e.target) &&
+          !mobileDropdownBtn.contains(e.target)
+        ) {
+          mobileDropdownContainer.classList.remove("open");
+          mobileDropdownArrow.textContent = "▼";
+        }
+
+        // Close desktop profile dropdown
+        if (
+          profileTrigger &&
+          profileDropdown &&
+          !profileTrigger.contains(e.target) &&
+          !profileDropdown.contains(e.target)
+        ) {
+          profileDropdown.classList.remove("open");
+          profileArrow.classList.remove("open");
+        }
+
+        // Close mobile profile dropdown
+        if (
+          mobileProfileTrigger &&
+          mobileProfileDropdown &&
+          !mobileProfileTrigger.contains(e.target) &&
+          !mobileProfileDropdown.contains(e.target)
+        ) {
+          mobileProfileDropdown.classList.remove("open");
+        }
+
+        // Close mobile nav when clicking outside (mobile only)
+        if (window.innerWidth <= 768) {
+          if (
+            !mobileNav.contains(e.target) &&
+            !hamburgerBtn.contains(e.target)
+          ) {
+            mobileNav.classList.remove("open");
+          }
+        }
+      });
+
+      // Handle window resize
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          mobileNav.classList.remove("open");
+          mobileNav.style.transform = "";
+          mobileNav.style.opacity = "";
+        }
+      });
+
+      // Close dropdown when clicking on a dropdown item
+      document.querySelectorAll(".dropdown-container a").forEach((link) => {
+        link.addEventListener("click", () => {
+          dropdownContainer.classList.remove("open");
+          dropdownArrow.textContent = "▼";
+        });
+      });
+
+      // Close mobile dropdown when clicking on a dropdown item
+      document
+        .querySelectorAll("#mobileDropdownContainer a")
+        .forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileDropdownContainer.classList.remove("open");
+            mobileDropdownArrow.textContent = "▼";
+            mobileNav.classList.remove("open");
+          });
+        });
+
+      function handleImageUpload(event) {
+        uploadedImagesData = Array.from(event.target.files);
+        const preview = document.getElementById("uploadedImages");
+        preview.innerHTML = "";
+
+        if (uploadedImagesData.length === 0) {
+          return;
+        }
+
+        uploadedImagesData.forEach((file) => {
+          const img = document.createElement("img");
+          img.src = URL.createObjectURL(file);
+          img.alt = "Uploaded medical image";
+          preview.appendChild(img);
+        });
+      }
+
+      function show(id) {
+        // Hide all sections
+        document
+          .querySelectorAll("#home,#ai,#processing,#report,#reports,#records")
+          .forEach((e) => (e.style.display = "none"));
+
+        // Show selected section
+        document.getElementById(id).style.display = "block";
+
+        // Update active nav link
+        document
+          .querySelectorAll(".nav a")
+          .forEach((link) => link.classList.remove("active"));
+
+        // Mark the active link if it exists
+        const activeLink = document.querySelector(
+          `.nav a[onclick="show('${id}')"]`,
+        );
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+
+        // If records page is shown, load records
+        if (id === "records") {
+          loadBlockchainRecords();
+        }
+
+        // If reports page is shown, load assessment history
+        if (id === "reports") {
+          loadHistory();
+        }
+
+        // Close mobile nav on link click
+        if (window.innerWidth <= 768) {
+          mobileNav.classList.remove("open");
+        }
+      }
+
+      // File type badge selection
+      document.querySelectorAll(".type-badge").forEach((badge) => {
+        badge.addEventListener("click", function () {
+          document
+            .querySelectorAll(".type-badge")
+            .forEach((b) => b.classList.remove("selected"));
+          this.classList.add("selected");
+          selectedFileType = this.dataset.type;
+          checkUploadReady();
+        });
+      });
+
+      // Upload area click
+      uploadArea.addEventListener("click", () => {
+        recordFileInput.click();
+      });
+
+      // File selection
+      recordFileInput.addEventListener("change", (e) => {
+        if (e.target.files.length > 0) {
+          selectedFile = e.target.files[0];
+          displayFilePreview(selectedFile);
+        }
+      });
+
+      // Drag and drop
+      uploadArea.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        uploadArea.style.borderColor = "#38bdf8";
+        uploadArea.style.background = "rgba(56, 189, 248, 0.05)";
+      });
+
+      uploadArea.addEventListener("dragleave", () => {
+        uploadArea.style.borderColor = "#1e293b";
+        uploadArea.style.background = "transparent";
+      });
+
+      uploadArea.addEventListener("drop", (e) => {
+        e.preventDefault();
+        uploadArea.style.borderColor = "#1e293b";
+        uploadArea.style.background = "transparent";
+
+        if (e.dataTransfer.files.length > 0) {
+          selectedFile = e.dataTransfer.files[0];
+          recordFileInput.files = e.dataTransfer.files;
+          displayFilePreview(selectedFile);
+        }
+      });
+
+      function displayFilePreview(file) {
+        const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+        let fileType = "Document";
+
+        if (file.type.startsWith("image/")) {
+          fileType = "Image";
+        } else if (file.type === "application/pdf") {
+          fileType = "PDF";
+        }
+
+        fileName.textContent = file.name;
+        fileMeta.textContent = `${fileSize} MB • ${fileType}`;
+        filePreview.style.display = "flex";
+        cancelBtn.style.display = "block";
+        checkUploadReady();
+      }
+
+      function clearSelectedFile() {
+        selectedFile = null;
+        recordFileInput.value = "";
+        filePreview.style.display = "none";
+        cancelBtn.style.display = "none";
+        document
+          .querySelectorAll(".type-badge")
+          .forEach((b) => b.classList.remove("selected"));
+        uploadBtn.disabled = true;
+      }
+
+      function cancelUpload() {
+        clearSelectedFile();
+      }
+
+      function checkUploadReady() {
+        uploadBtn.disabled = !(selectedFile && selectedFileType);
+      }
+
+      function uploadToBlockchain() {
+        if (!selectedFile || !selectedFileType) return;
+
+        const description =
+          fileDescription.value || `${selectedFileType.toUpperCase()} Scan`;
+        const now = new Date();
+        const dateStr = now.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+        const timeStr = now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        // Create new record
+        const newRecord = {
+          id: Date.now(),
+          name: selectedFile.name,
+          type: selectedFileType,
+          description: description,
+          date: dateStr,
+          time: timeStr,
+          size: (selectedFile.size / (1024 * 1024)).toFixed(2),
+          fileType: selectedFile.type || "application/octet-stream",
+          blockchainHash:
+            "0x" +
+            Math.random().toString(36).substring(2, 15) +
+            Math.random().toString(36).substring(2, 15),
+          timestamp: now.toISOString(),
+        };
+
+        // Add to records
+        blockchainRecords.unshift(newRecord);
+
+        // Save to localStorage
+        localStorage.setItem(
+          "blockchainRecords",
+          JSON.stringify(blockchainRecords),
+        );
+
+        // Show success message
+        alert(
+          `✅ Record uploaded to blockchain!\nTransaction Hash: ${newRecord.blockchainHash.substring(0, 20)}...`,
+        );
+
+        // Update the recent records count on dashboard
+        updateRecentRecordsCount();
+
+        // Clear form
+        clearSelectedFile();
+        fileDescription.value = "";
+
+        // Refresh records display
+        loadBlockchainRecords();
+      }
+
+      function loadBlockchainRecords() {
+        // Load from localStorage - if nothing, start with empty array
+        const saved = localStorage.getItem("blockchainRecords");
+        if (saved) {
+          blockchainRecords = JSON.parse(saved);
+        } else {
+          blockchainRecords = []; // Always start empty
+        }
+
+        // Update stats
+        recordStats.textContent = `${blockchainRecords.length} records stored`;
+        updateRecentRecordsCount();
+
+        // Render records
+        if (blockchainRecords.length === 0) {
+          recordsGrid.innerHTML = `
+            <div class="empty-records">
+              <i class="fas fa-folder-open"></i>
+              <p>No records yet. Upload your first medical record to get started.</p>
+            </div>
+          `;
+        } else {
+          recordsGrid.innerHTML = blockchainRecords
+            .map((record) => {
+              let icon = "fa-file-medical";
+              if (record.type === "xray") icon = "fa-x-ray";
+              else if (record.type === "ct") icon = "fa-cube";
+              else if (record.type === "mri") icon = "fa-brain";
+              else if (record.type === "lab") icon = "fa-flask";
+              else if (record.type === "prescription") icon = "fa-prescription";
+
+              return `
+              <div class="record-card">
+                <div class="record-icon">
+                  <i class="fas ${icon}"></i>
+                </div>
+                <div class="record-title">${record.description}</div>
+                <div class="record-description">
+                  ${record.name} • ${record.size} MB
+                </div>
+                <div class="record-meta">
+                  <span class="date">
+                    <i class="far fa-calendar-alt"></i> ${record.date} • ${record.time}
+                  </span>
+                  <span class="blockchain-badge" title="Transaction Hash: ${record.blockchainHash}">
+                    <i class="fas fa-link"></i> Verified
+                  </span>
+                </div>
+              </div>
+            `;
+            })
+            .join("");
+        }
+      }
+
+      // Function to update the recent records count on dashboard
+      function updateRecentRecordsCount() {
+        if (recentRecordsCount) {
+          recentRecordsCount.textContent =
+            blockchainRecords.length +
+            " Record" +
+            (blockchainRecords.length !== 1 ? "s" : "");
+        }
+      }
+
+      function startAI() {
+        const symptomsText = document.getElementById("symptoms").value;
+
+        if (!symptomsText.trim() && uploadedImagesData.length === 0) {
+          alert("Please describe symptoms or upload images for analysis.");
+          return;
+        }
+
+        show("processing");
+
+        // Store image URLs for this report
+        const reportId = Date.now();
+        reportImageData[reportId] = uploadedImagesData.map((file) => ({
+          name: file.name,
+          url: URL.createObjectURL(file),
+        }));
+
+        // Simulate AI processing
+        setTimeout(() => {
+          const riskLevels = ["low", "medium", "high"];
+          const randomRisk =
+            riskLevels[Math.floor(Math.random() * riskLevels.length)];
+
+          const report = {
+            id: reportId,
+            date: new Date().toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            }),
+            time: new Date().toLocaleTimeString("en-US", {
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
+            risk: randomRisk,
+            symptoms: symptomsText || "No symptoms described",
+            images: uploadedImagesData.map((f) => f.name),
+          };
+
+          reports.unshift(report);
+          updateReports();
+          show("reports");
+
+          // Clear the form
+          document.getElementById("symptoms").value = "";
+          document.getElementById("uploadedImages").innerHTML = "";
+          uploadedImagesData = [];
+          document.getElementById("imageUpload").value = "";
+        }, 2500);
+      }
+
+      function updateReports() {
+        document.getElementById("recentCount").innerText =
+          reports.length + " Report" + (reports.length !== 1 ? "s" : "");
+
+        const list = document.getElementById("reportsList");
+
+        if (reports.length === 0) {
+          list.innerHTML = `
+            <p style="color: #94a3b8; text-align: center; padding: 20px; grid-column: 1/-1;">
+              No reports yet. Run your first AI diagnosis to see reports here.
+            </p>`;
+          return;
+        }
+
+        list.innerHTML = "";
+        reports.forEach((r, i) => {
+          const reportCard = document.createElement("div");
+          reportCard.className = "card";
+          reportCard.innerHTML = `
+            <h4>Report from ${r.date}</h4>
+            <p style="font-size: 0.9rem; color: #94a3b8;">${r.time}</p>
+            <p style="margin: 10px 0;">Risk Level: <span class="badge ${r.risk}">${r.risk.toUpperCase()}</span></p>
+            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 15px;">
+              ${r.symptoms.length > 80 ? r.symptoms.substring(0, 80) + "..." : r.symptoms}
+            </p>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">
+              ${r.images.length} image${r.images.length !== 1 ? "s" : ""} uploaded
+            </p>
+            <button class="btn" onclick="viewReport(${i})">View Full Report</button>
+          `;
+          list.appendChild(reportCard);
+        });
+      }
+
+      function viewReport(i) {
+        const r = reports[i];
+        const images = reportImageData[r.id] || [];
+
+        let imagesHTML = "";
+        if (images.length > 0) {
+          imagesHTML = `
+            <div class="report-images">
+              ${images.map((img) => `<img src="${img.url}" alt="${img.name}" class="report-image">`).join("")}
+            </div>
+          `;
+        } else {
+          imagesHTML =
+            '<div class="no-images">No images uploaded for this report</div>';
+        }
+
+        document.getElementById("report").innerHTML = `
+          <div class="card">
+            <h3>AI Health Report</h3>
+            <p style="color: #94a3b8; margin-top: 5px;">${r.date} at ${r.time}</p>
+            <br>
+            <p><strong>Risk Level:</strong> <span class="badge ${r.risk}">${r.risk.toUpperCase()}</span></p>
+            <br>
+            <p><strong>Symptoms:</strong></p>
+            <p style="background: rgba(15, 23, 42, 0.5); padding: 12px; border-radius: 8px; margin-top: 5px;">${r.symptoms}</p>
+            <br>
+            <p><strong>Uploaded Images (${images.length}):</strong></p>
+            ${imagesHTML}
+            <br>
+            <p><strong>Top Possible Conditions:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 8px;">
+              <li>Condition A</li>
+              <li>Condition B</li>
+              <li>Condition C</li>
+            </ul>
+            <br>
+            <p><strong>Recommended Next Steps:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 8px;">
+              <li>Consult with a healthcare professional</li>
+              <li>Take prescribed medications as directed</li>
+              <li>Get adequate rest and hydration</li>
+              <li>Follow up in 3-5 days if symptoms persist</li>
+            </ul>
+            <br>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="btn">Download PDF</button>
+              <button class="btn" onclick="show('reports')" style="background: transparent; border: 1px solid #1e293b; color: #e5e7eb;">Back to Reports</button>
+            </div>
+          </div>`;
+        show("report");
+      }
+
+      // Initialize
+      updateReports();
+      loadBlockchainRecords(); // Load records on init (will be empty)
+
+      // Set default active tab
+      document.addEventListener("DOMContentLoaded", () => {
+        // Ensure records page is hidden by default, home page is shown
+        document.getElementById("home").style.display = "block";
+        document.getElementById("records").style.display = "none";
+
+        // Clear any existing sample data from localStorage on first load
+        if (!localStorage.getItem("blockchainRecords")) {
+          localStorage.setItem("blockchainRecords", JSON.stringify([]));
+        }
+      });
+    </script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

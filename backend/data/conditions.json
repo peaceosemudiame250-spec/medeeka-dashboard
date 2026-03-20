@@ -1,0 +1,26 @@
+[
+  {
+    "id": "condition_a",
+    "name": "Condition A",
+    "keywords": ["fever", "cough", "fatigue"],
+    "required": [],
+    "redFlags": ["shortness of breath", "chest pain"],
+    "baseWeight": 30
+  },
+  {
+    "id": "condition_b",
+    "name": "Condition B",
+    "keywords": ["headache", "nausea", "dizziness"],
+    "required": [],
+    "redFlags": [],
+    "baseWeight": 20
+  },
+  {
+    "id": "condition_c",
+    "name": "Condition C",
+    "keywords": ["chest pain", "shortness of breath", "palpitations"],
+    "required": [],
+    "redFlags": ["chest pain"],
+    "baseWeight": 40
+  }
+]
