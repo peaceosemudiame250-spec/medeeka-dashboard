@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medeeka - MVP</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.1.1/css/intlTelInput.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+  <body>
+    <div class="auth-container">
+      <!-- -------------------------------------------------------------
+                              LANDING PAGE
+       ------------------------------------------------------------- -->
+      <div id="home" class="page active">
+        <div class="logo">
+          <img
+            class="medeeka-logo"
+            src="../signin & signout/asset/medeeka-logo2.png"
+            alt="Medeeka Logo"
+            onclick="showPage('home')"
+          />
+        </div>
+        <div class="subtitle">Secure Digital Healthcare Platform</div>
+
+        <button class="btn" onclick="showPage('user-home')">
+          User Login / Register
+        </button>
+        <!-- -------------------------------------------------------------
+                          OORSEEH REMOVE THIS LATER
+       ------------------------------------------------------------- -->
+        <div style="height: 10px"></div>
+        <button class="btn" onclick="showPage('doctor-home')">
+          Doctor Login / Register
+        </button>
+      </div>
+      <!-- -------------------------------------------------------------
+                          PATIENT HOME PAGE
+       ------------------------------------------------------------- -->
+      <div id="user-home" class="page">
+        <div class="logo2">
+          <img
+            class="medeeka-logo2"
+            src="../signin & signout/asset/medeeka-logo2.png"
+            alt="Medeeka Logo"
+            onclick="showPage('home')"
+          />
+        </div>
+        <div class="subtitle">User Access</div>
+        <button class="btn" onclick="showPage('register')">
+          Register as User
+        </button>
+        <div style="height: 10px"></div>
+        <button class="btn" onclick="showPage('login')">Sign in as User</button>
+      </div>
+      <!-- -------------------------------------------------------------
+                        PATIENT REGISTER PAGE
+       ------------------------------------------------------------- -->
+      <div id="register" class="page">
+        <form id="user-register-form">
+          <div class="logo2">
+            <img
+              class="medeeka-logo2"
+              src="../signin & signout/asset/medeeka-logo2.png"
+              alt="Medeeka Logo"
+              onclick="showPage('home')"
+            />
+          </div>
+          <h2>Create User Account</h2>
+          <div
+            id="user-register-message"
+            class="form-message"
+            style="display: none"
+          ></div>
+          <div class="form-group">
+            <label>Email Address <span class="required">*</span></label>
+            <input
+              type="email"
+              id="user-email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Password <span class="required">*</span></label>
+            <!-- password-requirements -->
+            <input
+              type="password"
+              placeholder="********"
+              id="register-password"
+              required
+            />
+            <div class="password-requirements">
+              <div class="requirement" id="register-req-length">
+                <span class="indicator">✗</span> At least 8 characters
+              </div>
+              <div class="requirement" id="register-req-uppercase">
+                <span class="indicator">✗</span> Uppercase (A-Z)
+              </div>
+              <div class="requirement" id="register-req-lowercase">
+                <span class="indicator">✗</span> Lowercase (a-z)
+              </div>
+              <div class="requirement" id="register-req-numeric">
+                <span class="indicator">✗</span> Numeric (0-9)
+              </div>
+              <div class="requirement" id="register-req-symbol">
+                <span class="indicator">✗</span> Symbol (!@#$%^&*)
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Confirm Password <span class="required">*</span></label>
+            <input
+              type="password"
+              placeholder="********"
+              id="user-confirm-password"
+              required
+            />
+            <div class="error-message" id="patient-password-error">
+              Passwords do not match
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="form-group">
+            <label>Full Name <span class="required">*</span></label>
+            <input
+              type="text"
+              id="user-fullname"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Date of Birth <span class="required">*</span></label>
+            <input type="date" id="user-dob" required />
+          </div>
+          <div class="form-group">
+            <label>Gender <span class="required">*</span></label>
+            <select id="user-gender" required>
+              <option value="">Select Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Blood Group</label>
+            <select id="user-bloodgroup">
+              <option value="">Select Blood Group</option>
+              <option>O+</option>
+              <option>O-</option>
+              <option>A+</option>
+              <option>A-</option>
+              <option>B+</option>
+              <option>B-</option>
+              <option>AB+</option>
+              <option>AB-</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Known Conditions</label>
+            <textarea
+              id="user-conditions"
+              placeholder="Diabetes, Asthma, ..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label>Allergies</label>
+            <textarea
+              id="user-allergies"
+              placeholder="Drugs, foods, ..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label>Emergency Contact <span class="required">*</span></label>
+            <input
+              type="text"
+              id="user-emergency"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" placeholder="Phone number" required />
+          </div>
+          <p class="ux-tip">
+            💡 UX Tip: Users can search for their country in the dropdown to
+            select the code.
+          </p>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="user-terms" />
+            <label for="user-terms" class="checkbox-label">
+              I agree to the
+              <a href="#" onclick="showTermsModal(event)"
+                >Terms and Conditions</a
+              >
+            </label>
+          </div>
+          <button class="btn" type="submit" id="user-create-btn">
+            Create Account
+          </button>
+          <div class="alt-link">
+            Already have an account?
+            <a href="#" onclick="showPage('login')">Sign in</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- -------------------------------------------------------------
+                      PATIENT LOGIN PAGE
+      ------------------------------------------------------------- -->
+      <div id="login" class="page">
+        <h2>Welcome Back</h2>
+        <div
+          id="user-login-message"
+          class="form-message"
+          style="display: none"
+        ></div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="********" id="login-password" />
+          <div class="password-requirements">
+            <div class="requirement" id="login-req-length">
+              <span class="indicator">✗</span> At least 8 characters
+            </div>
+            <div class="requirement" id="login-req-uppercase">
+              <span class="indicator">✗</span> Uppercase (A-Z)
+            </div>
+            <div class="requirement" id="login-req-lowercase">
+              <span class="indicator">✗</span> Lowercase (a-z)
+            </div>
+            <div class="requirement" id="login-req-numeric">
+              <span class="indicator">✗</span> Numeric (0-9)
+            </div>
+            <div class="requirement" id="login-req-symbol">
+              <span class="indicator">✗</span> Symbol (!@#$%^&*)
+            </div>
+          </div>
+        </div>
+        <button class="btn">Sign In</button>
+        <div class="alt-link">
+          Don’t have an account?
+          <a href="#" onclick="showPage('register')">Register</a>
+        </div>
+      </div>
+
+      <!-- -------------------------------------------------------------
+                      DOCTOR HOME PAGE
+    ------------------------------------------------------------- -->
+      <div id="doctor-home" class="page">
+        <div class="logo2">
+          <img
+            class="medeeka-logo2"
+            src="../signin & signout/asset/medeeka-logo2.png"
+            alt="Medeeka Logo"
+            onclick="showPage('home')"
+          />
+        </div>
+        <div class="subtitle">Doctor Access</div>
+        <button class="btn" onclick="showPage('doctor-register')">
+          Register as Doctor
+        </button>
+        <div style="height: 10px"></div>
+        <button class="btn" onclick="showPage('doctor-login')">
+          Sign in as Doctor
+        </button>
+      </div>
+
+      <!-- -------------------------------------------------------------
+                      DOCTOR REGISTER PAGE
+      ------------------------------------------------------------- -->
+      <div id="doctor-register" class="page">
+        <div class="logo2">
+          <img
+            class="medeeka-logo2"
+            src="../signin & signout/asset/medeeka-logo2.png"
+            alt="Medeeka Logo"
+            onclick="showPage('home')"
+          />
+        </div>
+        <h2>Create Doctor Account</h2>
+        <div
+          id="doctor-register-message"
+          class="form-message"
+          style="display: none"
+        ></div>
+        <div class="form-group">
+          <label>Email Address <span class="required">*</span></label>
+          <input type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Password <span class="required">*</span></label>
+          <input
+            type="password"
+            placeholder="********"
+            id="doctor-register-password"
+            required
+          />
+          <div class="password-requirements">
+            <div class="requirement" id="doctor-register-req-length">
+              <span class="indicator">✗</span> At least 8 characters
+            </div>
+            <div class="requirement" id="doctor-register-req-uppercase">
+              <span class="indicator">✗</span> Uppercase (A-Z)
+            </div>
+            <div class="requirement" id="doctor-register-req-lowercase">
+              <span class="indicator">✗</span> Lowercase (a-z)
+            </div>
+            <div class="requirement" id="doctor-register-req-numeric">
+              <span class="indicator">✗</span> Numeric (0-9)
+            </div>
+            <div class="requirement" id="doctor-register-req-symbol">
+              <span class="indicator">✗</span> Symbol (!@#$%^&*)
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password <span class="required">*</span></label>
+          <input
+            type="password"
+            placeholder="********"
+            id="doctor-register-confirm-password"
+            required
+          />
+          <div class="error-message" id="doctor-register-password-error">
+            Passwords do not match
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Full Name <span class="required">*</span></label>
+          <input type="text" placeholder="Dr. John Doe" required />
+        </div>
+        <div class="form-group">
+          <label>Phone Number <span class="required">*</span></label>
+          <input
+            type="tel"
+            id="doctor-phone"
+            placeholder="Phone number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>Specialization <span class="required">*</span></label>
+          <select id="specialization-select" required>
+            <option value="">Select Specialization</option>
+            <option>General Practitioner</option>
+            <option>Pediatrician</option>
+            <option>Cardiologist</option>
+            <option>Neurologist</option>
+            <option>Surgeon</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div
+          class="form-group"
+          id="custom-specialization-group"
+          style="display: none"
+        >
+          <label
+            >Please specify your specialization
+            <span class="required">*</span></label
+          >
+          <input
+            type="text"
+            id="custom-specialization-input"
+            placeholder="Enter your specialization"
+          />
+        </div>
+        <div class="form-group">
+          <label>Medical License Number <span class="required">*</span></label>
+          <input type="text" placeholder="License Number" required />
+        </div>
+        <div class="form-group">
+          <label>Hospital / Clinic <span class="required">*</span></label>
+          <input type="text" placeholder="Hospital or Clinic Name" required />
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="doctor-terms" />
+          <label for="doctor-terms" class="checkbox-label">
+            I agree to the
+            <a href="#" onclick="showTermsModal(event)">Terms and Conditions</a>
+          </label>
+        </div>
+        <button class="btn" type="submit" id="doctor-create-btn">
+          Create Account
+        </button>
+        <div class="alt-link">
+          Already have an account?
+          <a href="#" onclick="showPage('doctor-login')">Sign in</a>
+        </div>
+      </div>
+
+      <!-- -------------------------------------------------------------
+                         DOCTOR LOGIN PAGE
+       ------------------------------------------------------------- -->
+      <div id="doctor-login" class="page">
+        <h2>Welcome Back, Doctor</h2>
+        <div
+          id="doctor-login-message"
+          class="form-message"
+          style="display: none"
+        ></div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="********"
+            id="doctor-login-password"
+          />
+          <!-- password-requirements -->
+          <div class="password-requirements">
+            <div class="requirement" id="doctor-login-req-length">
+              <span class="indicator">✗</span> At least 8 characters
+            </div>
+            <div class="requirement" id="doctor-login-req-uppercase">
+              <span class="indicator">✗</span> Uppercase (A-Z)
+            </div>
+            <div class="requirement" id="doctor-login-req-lowercase">
+              <span class="indicator">✗</span> Lowercase (a-z)
+            </div>
+            <div class="requirement" id="doctor-login-req-numeric">
+              <span class="indicator">✗</span> Numeric (0-9)
+            </div>
+            <div class="requirement" id="doctor-login-req-symbol">
+              <span class="indicator">✗</span> Symbol (!@#$%^&*)
+            </div>
+          </div>
+        </div>
+        <button class="btn">Sign In</button>
+        <div class="alt-link">
+          Don’t have an account?
+          <a href="#" onclick="showPage('doctor-register')">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="terms-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Terms and Conditions</h3>
+          <button class="close-btn" onclick="closeTermsModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            <strong>Welcome to Medeeka</strong>
+          </p>
+          <p>
+            By creating an account on Medeeka, you agree to comply with all
+            applicable laws and regulations. You are responsible for maintaining
+            the confidentiality of your account information and password.
+          </p>
+          <p>
+            <strong>User Responsibilities:</strong>
+          </p>
+          <ul>
+            <li>
+              Provide accurate and complete information during registration
+            </li>
+            <li>Maintain the security of your account credentials</li>
+            <li>Use the platform only for lawful purposes</li>
+            <li>
+              Not engage in any conduct that violates privacy or intellectual
+              property rights
+            </li>
+          </ul>
+          <p>
+            <strong>Medical Disclaimer:</strong>
+          </p>
+          <p>
+            Medeeka is a digital healthcare platform. All medical consultations
+            should be conducted by licensed healthcare professionals. Users are
+            responsible for seeking appropriate medical advice.
+          </p>
+          <p>
+            <strong>Limitation of Liability:</strong>
+          </p>
+          <p>
+            Medeeka is provided on an "as-is" basis. We are not liable for any
+            damages or loss of data. Users assume all risks associated with
+            using this platform.
+          </p>
+          <p>
+            By checking the checkbox below, you acknowledge that you have read
+            and agree to these Terms and Conditions.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" onclick="closeTermsModal()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.1.1/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.1.1/js/utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- 
+            1) PASSWORD - Alpha Numeric value with symbols character= 8
+            2) Agree to terms and conditions, make it clickable but later in the future
+        
+            3) for Doctor - verification takes place, look for api that verify credetials
+         -->
