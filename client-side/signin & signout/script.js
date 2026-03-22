@@ -288,7 +288,7 @@ if (userRegisterForm) {
       );
       userRegisterForm.reset();
       setTimeout(() => {
-        window.location.href = "../signin & signout/User Page/user.html";
+        window.location.href = "User Page/user.html";
       }, 2000);
     } catch (error) {
       showMessage(
@@ -337,30 +337,33 @@ if (doctorRegisterForm) {
 
     try {
       // TODO: Replace with your actual API endpoint
-      const response = await fetch("/api/auth/doctor/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://medeeka-dashboard.onrender.com/api/auth/doctor/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            password,
+            fullName: doctorRegisterForm.querySelector(
+              'input[placeholder="Dr. John Doe"]',
+            ).value,
+            phoneNumber: document.querySelector("#doctor-phone").value,
+            specialization:
+              document.getElementById("specialization-select").value === "Other"
+                ? document.getElementById("custom-specialization-input").value
+                : document.getElementById("specialization-select").value,
+            medicalLicenseNumber: doctorRegisterForm.querySelector(
+              'input[placeholder="License Number"]',
+            ).value,
+            hospital: doctorRegisterForm.querySelector(
+              'input[placeholder="Hospital or Clinic Name"]',
+            ).value,
+          }),
         },
-        body: JSON.stringify({
-          email,
-          password,
-          fullName: doctorRegisterForm.querySelector(
-            'input[placeholder="Dr. John Doe"]',
-          ).value,
-          phoneNumber: document.querySelector("#doctor-phone").value,
-          specialization:
-            document.getElementById("specialization-select").value === "Other"
-              ? document.getElementById("custom-specialization-input").value
-              : document.getElementById("specialization-select").value,
-          medicalLicenseNumber: doctorRegisterForm.querySelector(
-            'input[placeholder="License Number"]',
-          ).value,
-          hospital: doctorRegisterForm.querySelector(
-            'input[placeholder="Hospital or Clinic Name"]',
-          ).value,
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -490,13 +493,16 @@ if (doctorLoginForm) {
 
       try {
         // TODO: Replace with your actual API endpoint
-        const response = await fetch("/api/auth/doctor/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+        const response = await fetch(
+          "https://medeeka-dashboard.onrender.com/api/auth/doctor/login",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
           },
-          body: JSON.stringify({ email, password }),
-        });
+        );
 
         const data = await response.json();
 
