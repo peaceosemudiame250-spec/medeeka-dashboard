@@ -258,7 +258,7 @@ if (userRegisterForm) {
       console.log("📤 Sending registration data:", payload);
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/user/register",
+        "https://medeeka-dashboard.onrender.com/api/auth/user/register",
         {
           method: "POST",
           headers: {
@@ -417,7 +417,7 @@ if (userLoginForm) {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/user/login",
+          "https://medeeka-dashboard.onrender.com/api/auth/user/login",
           {
             method: "POST",
             headers: {
